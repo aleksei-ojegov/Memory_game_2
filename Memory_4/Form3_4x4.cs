@@ -7,19 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Memory_4
 {
-    public partial class Form2_8x8 : Form
+    public partial class Form3_4x4 : Form
     {
         private Form1 ParentRef;
 
         Random random = new Random();
         Timer timer = new Timer { Interval = 1000 };
-        string[,] data = new string[36, 2];
-        string[] proverka = new string[36];
-        string[] baza = new string[36];
+        string[,] data = new string[16, 2];
+        string[] proverka = new string[16];
+        string[] baza = new string[16];
 
         PictureBox firstClicked = null;
         PictureBox secondClicked = null;
@@ -59,21 +58,21 @@ namespace Memory_4
             "art17", "art17", "art18", "art18"
         };
 
-        public Form2_8x8(Form1 ParentRef, int Tema, int min_record)
+        public Form3_4x4(Form1 ParentRef, int Tema, int min_record)
         {
             InitializeComponent();
             tema_vidor = Tema;
             min_record_buf = min_record;
             AssignIconsToSquares();
             this.ParentRef = ParentRef;
-            this.FormClosed += Form1_Closed;
+            this.FormClosed += Form3_Closed;
             this.WindowState = FormWindowState.Maximized;
         }
 
-        private void Form1_Closed(object sender, System.EventArgs e)
+        private void Form3_Closed(object sender, System.EventArgs e)
         {
             timer.Stop();
-            if(!ender)
+            if (!ender)
             {
                 Form1.SelfRef.Close();
             }
@@ -85,15 +84,32 @@ namespace Memory_4
             icons_reserv.Clear();
             switch (tema_vidor)
             {
-                case 1: icons.AddRange(icons_loc);
-                        icons_reserv.AddRange(icons_loc);
-                        newImag = Properties.Resources.question;
-                        break;
-                case 2: icons.AddRange(icons_art);
-                        icons_reserv.AddRange(icons_art);
-                        newImag = Properties.Resources.question1; 
-                        break;
+                case 1:
+                    icons.AddRange(icons_loc);
+                    icons_reserv.AddRange(icons_loc);
+                    newImag = Properties.Resources.question;
+                    break;
+                case 2:
+                    icons.AddRange(icons_art);
+                    icons_reserv.AddRange(icons_art);
+                    newImag = Properties.Resources.question1;
+                    break;
                 default: break;
+            }
+
+            for(int i = 0; i < 10; i++)
+            {
+                int randomNumber = random.Next(icons.Count);
+                if(randomNumber % 2 == 0)
+                {
+                    icons.RemoveAt(randomNumber);
+                    icons.RemoveAt(randomNumber);
+                }
+                else
+                {
+                    icons.RemoveAt(randomNumber);
+                    icons.RemoveAt(randomNumber - 1);
+                }
             }
 
             int n = 0;
@@ -128,7 +144,7 @@ namespace Memory_4
 
             if (pictureBox != null)
             {
-                for (int i = 0; i < 36; i++)
+                for (int i = 0; i < 16; i++)
                 {
                     if (data[i, 0] == pictureBox.Name.ToString())
                     {
@@ -136,7 +152,7 @@ namespace Memory_4
                     }
                 }
 
-                for (int i = 0; i < 36; i++)
+                for (int i = 0; i < 16; i++)
                 {
                     if (pictureBox.Name.ToString() == baza[i])
                     {
@@ -213,18 +229,20 @@ namespace Memory_4
             }
             timer.Stop();
             //nazhat
-            points = time * 4 - (nazhat - 72);
+            points = time * 2 - (nazhat - 32);
             MessageBox.Show($"Ты нашёл все картинки!\n\nТы набрал {points} очков!", "Победа");
-            //Form1.SelfRef.tabl_rec(points);
-
-            if (points > min_record_buf)
+            if(points > min_record_buf)
             {
                 //MessageBox.Show($"гнида черножопая");
+                //timer.Stop();
                 Form1.SelfRef.new_record(points);
+                //Form1.SelfRef.Show();
+                //Form1.SelfRef.set_2();
             }
+            //Form1.SelfRef.tabl_rec(points);
 
-            Array.Clear(baza, 0, 36);
-            Array.Clear(proverka, 0, 36);
+            Array.Clear(baza, 0, 16);
+            Array.Clear(proverka, 0, 16);
             //Close();
             ResetImages();
             Reset_time();
@@ -237,9 +255,25 @@ namespace Memory_4
             //startGameTimer();
             icons.Clear();
             icons.AddRange(icons_reserv);
-            Array.Clear(baza, 0, 36);
-            Array.Clear(proverka, 0, 36);
+            Array.Clear(baza, 0, 16);
+            Array.Clear(proverka, 0, 16);
             int n = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                int randomNumber = random.Next(icons.Count);
+                if (randomNumber % 2 == 0)
+                {
+                    icons.RemoveAt(randomNumber);
+                    icons.RemoveAt(randomNumber);
+                }
+                else
+                {
+                    icons.RemoveAt(randomNumber);
+                    icons.RemoveAt(randomNumber - 1);
+                }
+            }
+
             foreach (Control control in tableLayoutPanel1.Controls)
             {
                 PictureBox pictureBox = control as PictureBox;
@@ -256,25 +290,15 @@ namespace Memory_4
             }
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            nazhat = 0;
-            ResetImages();
-            toolStripTextBox1.Text = "02: 00";
-            time = 120;
-        }
-
         private void Reset_time()
         {
             nazhat = 0;
             time = 120;
-            //startGameTimer();
             timer.Start();
         }
 
         private void startGameTimer()
         {
-            //timer.Start();
             timer.Tick += delegate
             {
                 time--;
@@ -285,7 +309,6 @@ namespace Memory_4
                     ResetImages();
                     Reset_time();
                 }
-
 
                 if (time == 120)
                 {
@@ -324,7 +347,7 @@ namespace Memory_4
             switch (keyData)
             {
                 case Keys.W:
-                    for (int i = 0; i < 36; i++)
+                    for (int i = 0; i < 16; i++)
                     {
                         proverka[i] = "123";
                     }
@@ -336,8 +359,8 @@ namespace Memory_4
                         pictureBox.Image = (Image)Properties.Resources.ResourceManager.GetObject(data[ss, 1]);
                         ss++;
                     }
+
                     CheckForWinner();
-                    //Application.Exit();
                     break;
                 default:
                     break;
@@ -354,14 +377,20 @@ namespace Memory_4
                 ender = true;
                 timer.Stop();
                 Form1.SelfRef.Show();
-                Form1.SelfRef.set();
+                Form1.SelfRef.set_2();
             }
             else if (dialogResult == DialogResult.No)
             {
                 return;
             }
+        }
 
-            
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            nazhat = 0;
+            ResetImages();
+            toolStripTextBox1.Text = "02: 00";
+            time = 120;
         }
     }
 }

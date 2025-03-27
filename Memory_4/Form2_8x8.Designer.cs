@@ -169,15 +169,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 423);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(804, 424);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // pictureBox36
             // 
             this.pictureBox36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox36.Location = new System.Drawing.Point(666, 355);
+            this.pictureBox36.Location = new System.Drawing.Point(670, 355);
             this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(129, 63);
+            this.pictureBox36.Size = new System.Drawing.Size(129, 64);
             this.pictureBox36.TabIndex = 35;
             this.pictureBox36.TabStop = false;
             this.pictureBox36.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -185,9 +185,9 @@
             // pictureBox35
             // 
             this.pictureBox35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox35.Location = new System.Drawing.Point(534, 355);
+            this.pictureBox35.Location = new System.Drawing.Point(537, 355);
             this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(124, 63);
+            this.pictureBox35.Size = new System.Drawing.Size(125, 64);
             this.pictureBox35.TabIndex = 34;
             this.pictureBox35.TabStop = false;
             this.pictureBox35.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -195,9 +195,9 @@
             // pictureBox34
             // 
             this.pictureBox34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox34.Location = new System.Drawing.Point(402, 355);
+            this.pictureBox34.Location = new System.Drawing.Point(404, 355);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(124, 63);
+            this.pictureBox34.Size = new System.Drawing.Size(125, 64);
             this.pictureBox34.TabIndex = 33;
             this.pictureBox34.TabStop = false;
             this.pictureBox34.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -205,9 +205,9 @@
             // pictureBox33
             // 
             this.pictureBox33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox33.Location = new System.Drawing.Point(270, 355);
+            this.pictureBox33.Location = new System.Drawing.Point(271, 355);
             this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(124, 63);
+            this.pictureBox33.Size = new System.Drawing.Size(125, 64);
             this.pictureBox33.TabIndex = 32;
             this.pictureBox33.TabStop = false;
             this.pictureBox33.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -217,7 +217,7 @@
             this.pictureBox32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox32.Location = new System.Drawing.Point(138, 355);
             this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(124, 63);
+            this.pictureBox32.Size = new System.Drawing.Size(125, 64);
             this.pictureBox32.TabIndex = 31;
             this.pictureBox32.TabStop = false;
             this.pictureBox32.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -227,7 +227,7 @@
             this.pictureBox31.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox31.Location = new System.Drawing.Point(5, 355);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(125, 63);
+            this.pictureBox31.Size = new System.Drawing.Size(125, 64);
             this.pictureBox31.TabIndex = 30;
             this.pictureBox31.TabStop = false;
             this.pictureBox31.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -235,7 +235,7 @@
             // pictureBox30
             // 
             this.pictureBox30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox30.Location = new System.Drawing.Point(666, 285);
+            this.pictureBox30.Location = new System.Drawing.Point(670, 285);
             this.pictureBox30.Name = "pictureBox30";
             this.pictureBox30.Size = new System.Drawing.Size(129, 62);
             this.pictureBox30.TabIndex = 29;
@@ -245,9 +245,9 @@
             // pictureBox29
             // 
             this.pictureBox29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox29.Location = new System.Drawing.Point(534, 285);
+            this.pictureBox29.Location = new System.Drawing.Point(537, 285);
             this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox29.Size = new System.Drawing.Size(125, 62);
             this.pictureBox29.TabIndex = 28;
             this.pictureBox29.TabStop = false;
             this.pictureBox29.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -255,9 +255,9 @@
             // pictureBox28
             // 
             this.pictureBox28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox28.Location = new System.Drawing.Point(402, 285);
+            this.pictureBox28.Location = new System.Drawing.Point(404, 285);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox28.Size = new System.Drawing.Size(125, 62);
             this.pictureBox28.TabIndex = 27;
             this.pictureBox28.TabStop = false;
             this.pictureBox28.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -265,9 +265,9 @@
             // pictureBox27
             // 
             this.pictureBox27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox27.Location = new System.Drawing.Point(270, 285);
+            this.pictureBox27.Location = new System.Drawing.Point(271, 285);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox27.Size = new System.Drawing.Size(125, 62);
             this.pictureBox27.TabIndex = 26;
             this.pictureBox27.TabStop = false;
             this.pictureBox27.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -277,7 +277,7 @@
             this.pictureBox26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox26.Location = new System.Drawing.Point(138, 285);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox26.Size = new System.Drawing.Size(125, 62);
             this.pictureBox26.TabIndex = 25;
             this.pictureBox26.TabStop = false;
             this.pictureBox26.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -295,7 +295,7 @@
             // pictureBox24
             // 
             this.pictureBox24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox24.Location = new System.Drawing.Point(666, 215);
+            this.pictureBox24.Location = new System.Drawing.Point(670, 215);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(129, 62);
             this.pictureBox24.TabIndex = 23;
@@ -305,9 +305,9 @@
             // pictureBox23
             // 
             this.pictureBox23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox23.Location = new System.Drawing.Point(534, 215);
+            this.pictureBox23.Location = new System.Drawing.Point(537, 215);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox23.Size = new System.Drawing.Size(125, 62);
             this.pictureBox23.TabIndex = 22;
             this.pictureBox23.TabStop = false;
             this.pictureBox23.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -315,7 +315,7 @@
             // pictureBox22
             // 
             this.pictureBox22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox22.Location = new System.Drawing.Point(666, 145);
+            this.pictureBox22.Location = new System.Drawing.Point(670, 145);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(129, 62);
             this.pictureBox22.TabIndex = 21;
@@ -325,9 +325,9 @@
             // pictureBox21
             // 
             this.pictureBox21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox21.Location = new System.Drawing.Point(534, 145);
+            this.pictureBox21.Location = new System.Drawing.Point(537, 145);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox21.Size = new System.Drawing.Size(125, 62);
             this.pictureBox21.TabIndex = 20;
             this.pictureBox21.TabStop = false;
             this.pictureBox21.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -335,7 +335,7 @@
             // pictureBox20
             // 
             this.pictureBox20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox20.Location = new System.Drawing.Point(666, 75);
+            this.pictureBox20.Location = new System.Drawing.Point(670, 75);
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.Size = new System.Drawing.Size(129, 62);
             this.pictureBox20.TabIndex = 19;
@@ -345,9 +345,9 @@
             // pictureBox19
             // 
             this.pictureBox19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox19.Location = new System.Drawing.Point(534, 75);
+            this.pictureBox19.Location = new System.Drawing.Point(537, 75);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox19.Size = new System.Drawing.Size(125, 62);
             this.pictureBox19.TabIndex = 18;
             this.pictureBox19.TabStop = false;
             this.pictureBox19.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -355,7 +355,7 @@
             // pictureBox18
             // 
             this.pictureBox18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox18.Location = new System.Drawing.Point(666, 5);
+            this.pictureBox18.Location = new System.Drawing.Point(670, 5);
             this.pictureBox18.Name = "pictureBox18";
             this.pictureBox18.Size = new System.Drawing.Size(129, 62);
             this.pictureBox18.TabIndex = 17;
@@ -365,9 +365,9 @@
             // pictureBox17
             // 
             this.pictureBox17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox17.Location = new System.Drawing.Point(534, 5);
+            this.pictureBox17.Location = new System.Drawing.Point(537, 5);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox17.Size = new System.Drawing.Size(125, 62);
             this.pictureBox17.TabIndex = 16;
             this.pictureBox17.TabStop = false;
             this.pictureBox17.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -375,9 +375,9 @@
             // pictureBox16
             // 
             this.pictureBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox16.Location = new System.Drawing.Point(402, 215);
+            this.pictureBox16.Location = new System.Drawing.Point(404, 215);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox16.Size = new System.Drawing.Size(125, 62);
             this.pictureBox16.TabIndex = 15;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -385,9 +385,9 @@
             // pictureBox15
             // 
             this.pictureBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox15.Location = new System.Drawing.Point(270, 215);
+            this.pictureBox15.Location = new System.Drawing.Point(271, 215);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox15.Size = new System.Drawing.Size(125, 62);
             this.pictureBox15.TabIndex = 14;
             this.pictureBox15.TabStop = false;
             this.pictureBox15.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -397,7 +397,7 @@
             this.pictureBox14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox14.Location = new System.Drawing.Point(138, 215);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox14.Size = new System.Drawing.Size(125, 62);
             this.pictureBox14.TabIndex = 13;
             this.pictureBox14.TabStop = false;
             this.pictureBox14.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -415,9 +415,9 @@
             // pictureBox12
             // 
             this.pictureBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox12.Location = new System.Drawing.Point(402, 145);
+            this.pictureBox12.Location = new System.Drawing.Point(404, 145);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox12.Size = new System.Drawing.Size(125, 62);
             this.pictureBox12.TabIndex = 11;
             this.pictureBox12.TabStop = false;
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -425,9 +425,9 @@
             // pictureBox11
             // 
             this.pictureBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox11.Location = new System.Drawing.Point(270, 145);
+            this.pictureBox11.Location = new System.Drawing.Point(271, 145);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox11.Size = new System.Drawing.Size(125, 62);
             this.pictureBox11.TabIndex = 10;
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -437,7 +437,7 @@
             this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox10.Location = new System.Drawing.Point(138, 145);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox10.Size = new System.Drawing.Size(125, 62);
             this.pictureBox10.TabIndex = 9;
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -455,9 +455,9 @@
             // pictureBox8
             // 
             this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox8.Location = new System.Drawing.Point(402, 75);
+            this.pictureBox8.Location = new System.Drawing.Point(404, 75);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox8.Size = new System.Drawing.Size(125, 62);
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -465,9 +465,9 @@
             // pictureBox7
             // 
             this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox7.Location = new System.Drawing.Point(270, 75);
+            this.pictureBox7.Location = new System.Drawing.Point(271, 75);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox7.Size = new System.Drawing.Size(125, 62);
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -477,7 +477,7 @@
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Location = new System.Drawing.Point(138, 75);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox6.Size = new System.Drawing.Size(125, 62);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -495,9 +495,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Location = new System.Drawing.Point(402, 5);
+            this.pictureBox4.Location = new System.Drawing.Point(404, 5);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(125, 62);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -505,9 +505,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox3.Location = new System.Drawing.Point(270, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(271, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(125, 62);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -517,7 +517,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(138, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(124, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(125, 62);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -545,7 +545,7 @@
             this.toolStripTextBox1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(804, 27);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -575,7 +575,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 451);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

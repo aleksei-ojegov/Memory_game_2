@@ -9,3 +9,16 @@ E:\Visual Studio\Memory_4\Memory_4\obj\Debug\Memory_4.csproj.GenerateResource.ca
 E:\Visual Studio\Memory_4\Memory_4\obj\Debug\Memory_4.csproj.CoreCompileInputs.cache
 E:\Visual Studio\Memory_4\Memory_4\obj\Debug\Memory_4.exe
 E:\Visual Studio\Memory_4\Memory_4\obj\Debug\Memory_4.pdb
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\bin\Debug\Memory_4.exe.config
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\bin\Debug\Memory_4.exe
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\bin\Debug\Memory_4.pdb
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.csproj.AssemblyReference.cache
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form1.resources
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form2_8x8.resources
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form3_4x4.resources
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Properties.Resources.resources
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.csproj.GenerateResource.cache
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.csproj.CoreCompileInputs.cache
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.exe
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.pdb
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form_record.resources
