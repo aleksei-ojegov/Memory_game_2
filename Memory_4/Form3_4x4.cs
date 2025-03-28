@@ -36,6 +36,7 @@ namespace Memory_4
         int min_record_buf = 0;
 
         bool ender = false;
+        bool new_record = false;
 
         List<string> icons = new List<string>();
         List<string> icons_reserv = new List<string>();
@@ -72,8 +73,10 @@ namespace Memory_4
         private void Form3_Closed(object sender, System.EventArgs e)
         {
             timer.Stop();
+            //MessageBox.Show("form closed nachalo");
             if (!ender)
             {
+                //MessageBox.Show("form closed");
                 Form1.SelfRef.Close();
             }
         }
@@ -219,40 +222,33 @@ namespace Memory_4
 
                 if (pictureBox != null)
                 {
-                    //if (pictureBox.Image != (Image)Properties.Resources.ResourceManager.GetObject("question"))
-                    //    return;
                     if (proverka[i] == null)
                         return;
-
                 }
                 i++;
             }
             timer.Stop();
-            //nazhat
+
             points = time * 2 - (nazhat - 32);
             MessageBox.Show($"Ты нашёл все картинки!\n\nТы набрал {points} очков!", "Победа");
             if(points > min_record_buf)
             {
-                //MessageBox.Show($"гнида черножопая");
-                //timer.Stop();
-                Form1.SelfRef.new_record(points);
-                //Form1.SelfRef.Show();
-                //Form1.SelfRef.set_2();
+                new_record = true;
+                ender = true;
+                timer.Stop();
+                Form1.SelfRef.set_2(new_record, points);
             }
-            //Form1.SelfRef.tabl_rec(points);
-
-            Array.Clear(baza, 0, 16);
-            Array.Clear(proverka, 0, 16);
-            //Close();
-            ResetImages();
-            Reset_time();
-
+            else
+            {
+                Array.Clear(baza, 0, 16);
+                Array.Clear(proverka, 0, 16);
+                ResetImages();
+                Reset_time();
+            }
         }
 
-        private void ResetImages() //функция сброса графичиских полей после раунда
-        {
-            //time = 60;
-            //startGameTimer();
+        private void ResetImages()
+        {//функция сброса графичиских полей после раунда
             icons.Clear();
             icons.AddRange(icons_reserv);
             Array.Clear(baza, 0, 16);
@@ -342,8 +338,8 @@ namespace Memory_4
             };
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData) //функция определения нажатия кнопки клавы
-        {
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {//функция определения нажатия кнопки клавы
             switch (keyData)
             {
                 case Keys.W:
@@ -377,7 +373,7 @@ namespace Memory_4
                 ender = true;
                 timer.Stop();
                 Form1.SelfRef.Show();
-                Form1.SelfRef.set_2();
+                Form1.SelfRef.set_2(new_record, points);
             }
             else if (dialogResult == DialogResult.No)
             {

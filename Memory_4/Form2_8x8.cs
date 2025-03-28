@@ -37,6 +37,7 @@ namespace Memory_4
         int min_record_buf = 0;
 
         bool ender = false;
+        bool new_record = false;
 
         List<string> icons = new List<string>();
         List<string> icons_reserv = new List<string>();
@@ -213,21 +214,24 @@ namespace Memory_4
             }
             timer.Stop();
             //nazhat
-            points = time * 4 - (nazhat - 72);
+            points = time * 8 - (nazhat - 72);
             MessageBox.Show($"Ты нашёл все картинки!\n\nТы набрал {points} очков!", "Победа");
             //Form1.SelfRef.tabl_rec(points);
 
             if (points > min_record_buf)
             {
-                //MessageBox.Show($"гнида черножопая");
-                Form1.SelfRef.new_record(points);
+                new_record = true;
+                ender = true;
+                timer.Stop();
+                Form1.SelfRef.set(new_record, points);
             }
-
-            Array.Clear(baza, 0, 36);
-            Array.Clear(proverka, 0, 36);
-            //Close();
-            ResetImages();
-            Reset_time();
+            else
+            {
+                Array.Clear(baza, 0, 16);
+                Array.Clear(proverka, 0, 16);
+                ResetImages();
+                Reset_time();
+            }
 
         }
 
@@ -354,7 +358,7 @@ namespace Memory_4
                 ender = true;
                 timer.Stop();
                 Form1.SelfRef.Show();
-                Form1.SelfRef.set();
+                Form1.SelfRef.set(new_record, points);
             }
             else if (dialogResult == DialogResult.No)
             {

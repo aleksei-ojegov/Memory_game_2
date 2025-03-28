@@ -20,6 +20,9 @@ namespace Memory_4
         static int min_record;
         static int Poin;
 
+        bool record = false;
+        int chislo_record = 0;
+
         public Form1()
         {
             InitializeComponent();
@@ -62,13 +65,6 @@ namespace Memory_4
                     itog[i] = ff;
                 }
             }
-
-            //for (int i = 0; i < 5;  i++)
-            //{
-                //this.dataGridView1.Rows[i].Cells[0].Value = i + 1;
-                //this.dataGridView1.Rows[i].Cells[1].Value = mass[i,0];
-                //this.dataGridView1.Rows[i].Cells[2].Value = itog[i];
-            //}
 
             this.label1_1.Text = mass[0, 0];
             this.label1_2.Text = mass[1, 0];
@@ -127,15 +123,19 @@ namespace Memory_4
             this.tabControl1.SelectedIndex = 0;
         }
 
-        public void set() //закрытие дочерней формы, после возращения в меню
-        {
+        public void set(bool new_record, int points)
+        {//закрытие дочерней формы игры 6 на 6
             this.tabControl1.SelectedIndex = 0;
+            record = new_record;
             try
             {
                 Form2_8x8 f2 = (Form2_8x8)Application.OpenForms["Form2_8x8"];
                 f2.Close();
-                //Form3_4x4 f3 = (Form3_4x4)Application.OpenForms["Form3_4x4"];
-                //f3.Close(); 
+                if (record)
+                {
+                    chislo_record = points;
+                    this.new_record(chislo_record);
+                }
             }
             catch (NullReferenceException ne)
             {
@@ -143,13 +143,19 @@ namespace Memory_4
             }
         }
 
-        public void set_2() //закрытие дочерней формы, после возращения в меню
-        {
+        public void set_2(bool new_record, int points)
+        {//закрытие дочерней формы игры 4 на 4
             this.tabControl1.SelectedIndex = 0;
+            record = new_record;
             try
             {
                 Form3_4x4 f3 = (Form3_4x4)Application.OpenForms["Form3_4x4"];
                 f3.Close();
+                if (record)
+                {
+                    chislo_record = points;
+                    this.new_record(chislo_record);
+                }
             }
             catch (NullReferenceException ne)
             {
@@ -157,8 +163,8 @@ namespace Memory_4
             }
         }
 
-        public void set_3(int point, string hero) //закрытие дочерней формы, после возращения в меню
-        {
+        public void set_3(int point, string hero)
+        {//закрытие дочерней формы рекорда
             this.tabControl1.SelectedIndex = 3;
             tabl_rec(point, hero);
             try
@@ -240,7 +246,6 @@ namespace Memory_4
 
         private void button_game_easy_Click(object sender, EventArgs e)
         {
-            //min_record = Convert.ToInt32(dataGridView1.Rows[4].Cells[2].Value.ToString());
             min_record = Convert.ToInt32(label2_5.Text);
             Form3_4x4 form3 = new Form3_4x4(SelfRef, Tema, min_record);
             form3.Show();

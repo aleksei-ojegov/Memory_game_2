@@ -31,6 +31,23 @@ namespace Memory_4
         private void button1_Click(object sender, EventArgs e)
         {
             string hero = textBox1.Text;
+            
+            if(hero.Length == 0)
+            {
+                MessageBox.Show($"Нужно ввести хотя бы один символ");
+                return;
+            }
+            
+            for( int i = 1; i < hero.Length; i++ )
+            {
+                char c = hero[i];
+                if( c == ' ' )
+                {
+                    MessageBox.Show($"Нельзя использовать пробелы в имени");
+                    return;
+                }
+            }
+
             Form1.SelfRef.Show();
             Form1.SelfRef.set_3(point, hero);
         }
