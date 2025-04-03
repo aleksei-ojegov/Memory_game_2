@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,7 @@ namespace Memory_4
 
         bool ender = false;
         bool new_record = false;
+        bool start = true;
 
         List<string> icons = new List<string>();
         List<string> icons_reserv = new List<string>();
@@ -69,6 +71,48 @@ namespace Memory_4
             this.ParentRef = ParentRef;
             this.FormClosed += Form1_Closed;
             this.WindowState = FormWindowState.Maximized;
+            this.SizeChanged += Form_record_SizeChanged;
+            Okrugli_pictire();
+            this.Show();
+        }
+
+        public void Okrugli_pictire()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                PictureBox pictureBox = control as PictureBox;
+                GraphicsPath gp = new GraphicsPath();
+                Rectangle r = new Rectangle(0, 0, pictureBox.Width, pictureBox.Height);
+                int d = pictureBox.Width / 100 * 10;
+                gp.AddArc(r.X, r.Y, d, d, 180, 90);
+                gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+                gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+                gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+                Region rg = new Region(gp);
+                pictureBox.Region = rg;
+            }
+        }
+
+        private void Form_record_SizeChanged(object sender, EventArgs e)
+        {
+            if (!start)
+            {
+                GraphicsPath gp = new GraphicsPath();
+                Rectangle r = new Rectangle(0, 0, pictureBox1.Width, pictureBox1.Height);
+                int d = pictureBox1.Width / 100 * 10;
+                gp.AddArc(r.X, r.Y, d, d, 180, 90);
+                gp.AddArc(r.X + r.Width - d, r.Y, d, d, 270, 90);
+                gp.AddArc(r.X + r.Width - d, r.Y + r.Height - d, d, d, 0, 90);
+                gp.AddArc(r.X, r.Y + r.Height - d, d, d, 90, 90);
+
+                foreach (Control control in tableLayoutPanel1.Controls)
+                {
+                    PictureBox pictureBox = control as PictureBox;
+                    Region rg = new Region(gp);
+                    pictureBox.Region = rg;
+                }
+            }
+            start = false;
         }
 
         private void Form1_Closed(object sender, System.EventArgs e)

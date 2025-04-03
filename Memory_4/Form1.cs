@@ -9,7 +9,11 @@ using System.Reflection.Emit;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.CompilerServices;
 
 namespace Memory_4
 {
@@ -19,29 +23,52 @@ namespace Memory_4
         static int Tema;
         static int min_record;
         static int Poin;
+        string[] words = new string[18];
+        string[] slovo = new string[3];
+        string[] baza = new string[18];
+        string[] baza_loc = new string[18]
+        {
+            "im1", "im2", "im3", "im4",
+            "im5", "im6", "im7",  "im8",
+            "im9", "im10",  "im11",  "im12",
+            "im13", "im14",  "im15", "im16",
+            "im17",  "im18"
+        };
+        string[] baza_art = new string[18]
+        {
+            "art1", "art2", "art3", "art4",
+            "art5", "art6", "art7",  "art8",
+            "art9", "art10",  "art11",  "art12",
+            "art13", "art14",  "art15", "art16",
+            "art17",  "art18"
+        };
 
         bool record = false;
+
         int chislo_record = 0;
+        int nomer_image = 0;
+        int nomer_hero = 0;
+        int nomer_color = 1;
+
+        Color disco = new Color();
 
         public Form1()
         {
             InitializeComponent();
             SelfRef = this;
-            //this.dataGridView1.Rows.Add(5);
             Refresh_record();
         }
 
         private void Refresh_record()
-        {
+        {//расстановка рекордстменов в таблице
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.txt");
             FileInfo fileInfo = new FileInfo(filePath);
-
+            
             int[] itog = new int[6];
             string[,] mass = new string[6, 2];
 
-            // чтение текста из файла
             using (StreamReader reader = fileInfo.OpenText())
-            {
+            {// чтение текста из файла
                 string s = "";
                 string ses = null;
                 while ((s = reader.ReadLine()) != null)
@@ -66,23 +93,24 @@ namespace Memory_4
                 }
             }
 
-            this.label1_1.Text = mass[0, 0];
-            this.label1_2.Text = mass[1, 0];
-            this.label1_3.Text = mass[2, 0];
-            this.label1_4.Text = mass[3, 0];
-            this.label1_5.Text = mass[4, 0];
+            label1_1.Text = mass[0, 0];
+            label1_2.Text = mass[1, 0];
+            label1_3.Text = mass[2, 0];
+            label1_4.Text = mass[3, 0];
+            label1_5.Text = mass[4, 0];
 
-            this.label2_1.Text = mass[0, 1];
-            this.label2_2.Text = mass[1, 1];
-            this.label2_3.Text = mass[2, 1];
-            this.label2_4.Text = mass[3, 1];
-            this.label2_5.Text = mass[4, 1];
+            label2_1.Text = mass[0, 1];
+            label2_2.Text = mass[1, 1];
+            label2_3.Text = mass[2, 1];
+            label2_4.Text = mass[3, 1];
+            label2_5.Text = mass[4, 1];
         }
 
         private void button_game_Click(object sender, EventArgs e)
         {
             Form2_8x8 form2 = new Form2_8x8(SelfRef, Tema, min_record);
-            form2.Show();
+            form2.Okrugli_pictire();
+            //form2.Show();
             this.Hide();
         }
 
@@ -119,8 +147,25 @@ namespace Memory_4
         }
 
         private void button_menu_4_back_Click(object sender, EventArgs e)
-        {
+        {//выход из вкладки Рекорды
             this.tabControl1.SelectedIndex = 0;
+            label1_1.ForeColor = Color.SteelBlue;
+            label2_1.ForeColor = Color.SteelBlue;
+            label1.ForeColor = Color.SteelBlue;
+            label1_2.ForeColor = Color.SteelBlue;
+            label2_2.ForeColor = Color.SteelBlue;
+            label2.ForeColor = Color.SteelBlue; 
+            label1_3.ForeColor = Color.SteelBlue;
+            label2_3.ForeColor = Color.SteelBlue;
+            label3.ForeColor = Color.SteelBlue; 
+            label1_4.ForeColor = Color.SteelBlue;
+            label2_4.ForeColor = Color.SteelBlue;
+            label4.ForeColor = Color.SteelBlue; 
+            label1_5.ForeColor = Color.SteelBlue;
+            label2_5.ForeColor = Color.SteelBlue;
+            label5.ForeColor = Color.SteelBlue;
+
+            timer1.Stop();
         }
 
         public void set(bool new_record, int points)
@@ -179,10 +224,11 @@ namespace Memory_4
         }
 
         public void tabl_rec(int result, string hero)
-        {
-            //string hero = null;
+        {//обновление данных рекордов после нового рекорда
+
             int rer = result;
             string[,] mass = new string[6, 2];
+            string[] mas = new string[6];
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.txt");
             FileInfo fileInfo = new FileInfo(filePath);
@@ -229,6 +275,12 @@ namespace Memory_4
                         }
                     }
                 }
+
+                for(int i = 0; i < mass.GetLength(0); i++)
+                {
+                    mas[i] = mass[i,0];
+                }
+                nomer_hero = Array.IndexOf(mas, hero);
             }
 
             File.Delete(filePath);
@@ -241,6 +293,7 @@ namespace Memory_4
                     writer.WriteLine(mass[i, 0] + " " + mass[i, 1]);
                 }
             }
+            timer1.Start();
             Refresh_record();
         }
 
@@ -248,7 +301,8 @@ namespace Memory_4
         {
             min_record = Convert.ToInt32(label2_5.Text);
             Form3_4x4 form3 = new Form3_4x4(SelfRef, Tema, min_record);
-            form3.Show();
+            form3.Okrugli_pictire();
+            //form3.Show();
             this.Hide();
         }
 
@@ -257,6 +311,183 @@ namespace Memory_4
             Poin = point;
             Form_record form_r = new Form_record(SelfRef, Poin);
             form_r.Show();
+        }
+
+        private void button_bock_Click(object sender, EventArgs e)
+        {//открытие энциклопедии из главного меню
+            this.tabControl1.SelectedIndex = 4;
+            button_next.Enabled = true;
+            button_next.BackColor = Color.LightBlue;
+            baza = baza_loc;
+            nomer_image = 0;
+            pictureBox_book.Image = (Image)Properties.Resources.ResourceManager.GetObject(baza[0]);
+            label_nomer_book.Text = $"{nomer_image + 1} / 18";
+            button_back.Enabled = false;
+            button_back.BackColor = Color.DarkSlateGray;
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "loc.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                words = ses.Split('!');
+            }
+            slovo = words[nomer_image].Split('_');
+            textBox1.Text = slovo[0];
+            textBox2.Text = slovo[1];
+            textBox3.Text = slovo[2];
+        }
+
+        private void button_back_Click(object sender, EventArgs e)
+        {//кнопка предыдущая картинка в энциклопедии
+            nomer_image--;
+            pictureBox_book.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(baza[nomer_image]);
+            label_nomer_book.Text = $"{nomer_image + 1} / 18";
+            //textBox1.Text = words[nomer_image];
+            slovo = words[nomer_image].Split('_');
+            textBox1.Text = slovo[0];
+            textBox2.Text = slovo[1];
+            textBox3.Text = slovo[2];
+            if (nomer_image < 17)
+            {
+                button_next.Enabled = true;
+                button_next.BackColor = Color.LightBlue;
+            }
+
+            if (nomer_image == 0)
+            {
+                button_back.Enabled = false;
+                button_back.BackColor = Color.DarkSlateGray;
+            }
+        }
+
+        private void button_next_Click(object sender, EventArgs e)
+        {//кнопка следующая картинка в энциклопедии
+            nomer_image++;
+            pictureBox_book.Image = (System.Drawing.Image)Properties.Resources.ResourceManager.GetObject(baza[nomer_image]);
+            label_nomer_book.Text = $"{nomer_image + 1} / 18";
+            //textBox1.Text = words[nomer_image];
+            slovo = words[nomer_image].Split('_');
+            textBox1.Text = slovo[0];
+            textBox2.Text = slovo[1];
+            textBox3.Text = slovo[2];
+            if (nomer_image > 0)
+            {
+                button_back.Enabled = true;
+                button_back.BackColor = Color.LightBlue;
+            }
+
+            if (nomer_image == 17)
+            {
+                button_next.Enabled = false;
+                button_next.BackColor = Color.DarkSlateGray;
+            }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {//возрат в меню из энциклопедии
+            this.tabControl1.SelectedIndex = 0;
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {//выбор темы география в энциклопедии
+            button_next.Enabled = true;
+            button_next.BackColor = Color.LightBlue;
+            nomer_image = 0;
+            baza = baza_loc;
+            pictureBox_book.Image = (Image)Properties.Resources.ResourceManager.GetObject(baza[0]);
+            label_nomer_book.Text = $"{nomer_image + 1} / 18";
+            button_back.Enabled = false;
+            button_back.BackColor = Color.DarkSlateGray;
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "loc.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '\n';
+                }
+                words = ses.Split('\n');
+            }
+            //textBox1.Text = words[nomer_image];
+            slovo = words[nomer_image].Split('_');
+            textBox1.Text = slovo[0];
+            textBox2.Text = slovo[1];
+            textBox3.Text = slovo[2];
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {//выбор темы живопись в энциклопедии
+            button_next.Enabled = true;
+            button_next.BackColor = Color.LightBlue;
+            nomer_image = 0;
+            baza = baza_art;
+            pictureBox_book.Image = (Image)Properties.Resources.ResourceManager.GetObject(baza[0]);
+            label_nomer_book.Text = $"{nomer_image + 1} / 18";
+            button_back.Enabled = false;
+            button_back.BackColor = Color.DarkSlateGray;
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "art.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '\n';
+                }
+                words = ses.Split('\n');
+            }
+            //textBox1.Text = words[nomer_image];
+            slovo = words[nomer_image].Split('_');
+            textBox1.Text = slovo[0];
+            textBox2.Text = slovo[1];
+            textBox3.Text = slovo[2];
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            switch (nomer_hero)
+            {
+                case 0: label1_1.ForeColor = disco;
+                        label2_1.ForeColor = disco;
+                        label1.ForeColor = disco; break;
+
+                case 1: label1_2.ForeColor = disco;
+                        label2_2.ForeColor = disco;
+                        label2.ForeColor = disco; break;
+
+                case 2: label1_3.ForeColor = disco;
+                        label2_3.ForeColor = disco;
+                        label3.ForeColor = disco; break;
+
+                case 3: label1_4.ForeColor = disco;
+                        label2_4.ForeColor = disco;
+                        label4.ForeColor = disco; break;
+
+                case 4: label1_5.ForeColor = disco;
+                        label2_5.ForeColor = disco;
+                        label5.ForeColor = disco; break;
+                default: break;
+            }
+
+            switch (nomer_color)
+            {
+                case 1: disco = Color.Fuchsia; break;
+                case 2: disco = Color.LimeGreen; 
+                        nomer_color = 0; break;
+                default: break;
+            }
+            nomer_color++;
         }
     }
 }

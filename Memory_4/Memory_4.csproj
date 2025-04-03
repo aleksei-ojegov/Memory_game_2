@@ -272,5 +272,8 @@
   <ItemGroup>
     <None Include="Resources\gzhel\8.3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-cathedral-of-saint-basil-3655164.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

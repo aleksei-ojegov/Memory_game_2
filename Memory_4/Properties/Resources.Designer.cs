@@ -313,6 +313,16 @@ namespace Memory_4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_icon_cathedral_of_saint_basil_36551641 {
+            get {
+                object obj = ResourceManager.GetObject("free_icon_cathedral_of_saint_basil_36551641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap im1 {
             get {
                 object obj = ResourceManager.GetObject("im1", resourceCulture);

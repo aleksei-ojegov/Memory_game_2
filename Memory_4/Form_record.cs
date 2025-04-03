@@ -14,6 +14,7 @@ namespace Memory_4
     {
         private Form1 ParentRef;
         int point = 0;
+        bool ending = false;
 
         public Form_record(Form1 ParentRef, int Poin)
         {
@@ -25,14 +26,18 @@ namespace Memory_4
 
         private void Form_Closed(object sender, System.EventArgs e)
         {
-            //Form1.SelfRef.Close();
+            if (!ending)
+            {
+                Form1.SelfRef.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string hero = textBox1.Text;
-            
-            if(hero.Length == 0)
+            ending = true;
+
+            if (hero.Length == 0)
             {
                 MessageBox.Show($"Нужно ввести хотя бы один символ");
                 return;
