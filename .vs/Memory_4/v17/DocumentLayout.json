@@ -3,7 +3,18 @@
   "WorkspaceRootPath": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|e:\\visual studio\\memory_4\\memory_game_2\\memory_4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form3_4x4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form3_4x4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|e:\\visual studio\\memory_4\\memory_game_2\\memory_4\\form_record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form_record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Memory_4||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,27 +22,16 @@
       "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form_record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form_record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form3_4x4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form3_4x4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form2_8x8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form2_8x8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Memory_4||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form2_8x8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form2_8x8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form3_4x4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form3_4x4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form2_8x8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|solutionrelative:memory_4\\form2_8x8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{54C18EDA-D04C-4DAE-B743-D81C0C42F2CA}|Memory_4\\Memory_4.csproj|E:\\Visual Studio\\Memory_4\\Memory_game_2\\memory_4\\form_record.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -49,7 +49,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,32 +57,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form1.cs",
-              "RelativeDocumentMoniker": "Memory_4\\Form1.cs",
-              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form1.cs",
-              "RelativeToolTip": "Memory_4\\Form1.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAuwHQAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T12:53:03.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form1.cs",
               "RelativeDocumentMoniker": "Memory_4\\Form1.cs",
               "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Memory_4\\Form1.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T12:53:00.667Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-04-03T12:10:27.965Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form1.cs",
+              "RelativeDocumentMoniker": "Memory_4\\Form1.cs",
+              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form1.cs",
+              "RelativeToolTip": "Memory_4\\Form1.cs",
+              "ViewState": "AgIAAMcBAAAAAAAAAAAEwNIBAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:53:03.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3_4x4.cs",
+              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs",
+              "RelativeDocumentMoniker": "Memory_4\\Form3_4x4.cs",
+              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs",
+              "RelativeToolTip": "Memory_4\\Form3_4x4.cs",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAQwBUBAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T04:40:27.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form_record.cs",
+              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form_record.cs",
+              "RelativeDocumentMoniker": "Memory_4\\Form_record.cs",
+              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form_record.cs",
+              "RelativeToolTip": "Memory_4\\Form_record.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T11:43:12.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Memory_4",
+              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Memory_4.csproj",
+              "RelativeDocumentMoniker": "Memory_4\\Memory_4.csproj",
+              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Memory_4.csproj",
+              "RelativeToolTip": "Memory_4\\Memory_4.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-25T12:56:13.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Form2_8x8.cs",
               "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form2_8x8.cs",
               "RelativeDocumentMoniker": "Memory_4\\Form2_8x8.cs",
@@ -94,54 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Memory_4",
-              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Memory_4.csproj",
-              "RelativeDocumentMoniker": "Memory_4\\Memory_4.csproj",
-              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Memory_4.csproj",
-              "RelativeToolTip": "Memory_4\\Memory_4.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-25T12:56:13.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form_record.cs",
-              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form_record.cs",
-              "RelativeDocumentMoniker": "Memory_4\\Form_record.cs",
-              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form_record.cs",
-              "RelativeToolTip": "Memory_4\\Form_record.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwB0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T11:43:12.194Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form3_4x4.cs",
-              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs",
-              "RelativeDocumentMoniker": "Memory_4\\Form3_4x4.cs",
-              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs",
-              "RelativeToolTip": "Memory_4\\Form3_4x4.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAwwHsAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T04:40:27.439Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Form3_4x4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs",
-              "RelativeDocumentMoniker": "Memory_4\\Form3_4x4.cs",
-              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "Memory_4\\Form3_4x4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T04:35:26.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Form2_8x8.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form2_8x8.cs",
               "RelativeDocumentMoniker": "Memory_4\\Form2_8x8.cs",
@@ -152,6 +140,18 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form3_4x4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs",
+              "RelativeDocumentMoniker": "Memory_4\\Form3_4x4.cs",
+              "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form3_4x4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Memory_4\\Form3_4x4.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T04:35:26.407Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Form_record.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "DocumentMoniker": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form_record.cs",
@@ -159,8 +159,7 @@
               "ToolTip": "E:\\Visual Studio\\Memory_4\\Memory_game_2\\Memory_4\\Form_record.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "Memory_4\\Form_record.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T11:38:41.17Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2025-03-27T11:38:41.17Z"
             },
             {
               "$type": "Document",
@@ -172,8 +171,7 @@
               "RelativeToolTip": "Memory_4\\Form1.Designer.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAUwF0CAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T10:14:21.561Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T10:14:21.561Z"
             }
           ]
         }

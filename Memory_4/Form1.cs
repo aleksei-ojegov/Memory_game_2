@@ -57,6 +57,7 @@ namespace Memory_4
             InitializeComponent();
             SelfRef = this;
             Refresh_record();
+            //tabControl1.BackColor = Color.White;
         }
 
         private void Refresh_record()

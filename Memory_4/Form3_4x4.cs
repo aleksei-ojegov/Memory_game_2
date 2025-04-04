@@ -23,7 +23,7 @@ namespace Memory_4
 
         PictureBox firstClicked = null;
         PictureBox secondClicked = null;
-
+        
         Image newImag = Properties.Resources.question;
 
         string firstClick = null;

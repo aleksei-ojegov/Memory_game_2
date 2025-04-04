@@ -42,8 +42,14 @@ namespace Memory_4
                 MessageBox.Show($"Нужно ввести хотя бы один символ");
                 return;
             }
-            
-            for( int i = 1; i < hero.Length; i++ )
+
+            if (hero.Length > 11)
+            {
+                MessageBox.Show($"Допустимый диапозон 11 символов, вы ввели {hero.Length}");
+                return;
+            }
+
+            for ( int i = 1; i < hero.Length; i++ )
             {
                 char c = hero[i];
                 if( c == ' ' )
