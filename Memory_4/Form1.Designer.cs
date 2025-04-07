@@ -655,11 +655,11 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(35, 265);
+            this.textBox3.Location = new System.Drawing.Point(30, 266);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(270, 30);
+            this.textBox3.Size = new System.Drawing.Size(290, 30);
             this.textBox3.TabIndex = 16;
             this.textBox3.TabStop = false;
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -668,11 +668,11 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(35, 229);
+            this.textBox2.Location = new System.Drawing.Point(30, 230);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(270, 30);
+            this.textBox2.Size = new System.Drawing.Size(290, 30);
             this.textBox2.TabIndex = 15;
             this.textBox2.TabStop = false;
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -682,11 +682,11 @@
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(35, 193);
+            this.textBox1.Location = new System.Drawing.Point(30, 194);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(270, 30);
+            this.textBox1.Size = new System.Drawing.Size(290, 30);
             this.textBox1.TabIndex = 14;
             this.textBox1.TabStop = false;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -734,7 +734,7 @@
             // 
             // pictureBox_book
             // 
-            this.pictureBox_book.Location = new System.Drawing.Point(58, 43);
+            this.pictureBox_book.Location = new System.Drawing.Point(63, 46);
             this.pictureBox_book.Name = "pictureBox_book";
             this.pictureBox_book.Size = new System.Drawing.Size(225, 133);
             this.pictureBox_book.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
