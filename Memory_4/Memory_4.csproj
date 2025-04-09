@@ -82,6 +82,18 @@
     <Compile Include="Form3_4x4.Designer.cs">
       <DependentUpon>Form3_4x4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_avatarka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_avatarka.Designer.cs">
+      <DependentUpon>Form_avatarka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_happy_animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_happy_animal.Designer.cs">
+      <DependentUpon>Form_happy_animal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_record.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3_4x4.resx">
       <DependentUpon>Form3_4x4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_avatarka.resx">
+      <DependentUpon>Form_avatarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_happy_animal.resx">
+      <DependentUpon>Form_happy_animal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_record.resx">
       <DependentUpon>Form_record.cs</DependentUpon>
@@ -274,6 +292,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-icon-cathedral-of-saint-basil-3655164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\baran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\baran_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\kozel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\kozel_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\krisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\petux.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\petux_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\svinia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\svinia_dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\akula.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\batmen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\drakon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\orl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal\sova.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

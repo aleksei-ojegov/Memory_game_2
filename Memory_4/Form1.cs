@@ -23,6 +23,7 @@ namespace Memory_4
         static int Tema;
         static int min_record;
         static int Poin;
+        string[] profil = new string[18];
         string[] words = new string[18];
         string[] slovo = new string[3];
         string[] baza = new string[18];
@@ -42,6 +43,14 @@ namespace Memory_4
             "art13", "art14",  "art15", "art16",
             "art17",  "art18"
         };
+        string[] animal = new string[4]
+        {
+            "petux", "svinia", "kozel", "baran"
+        };
+        string[] color = new string[4]
+        {
+            "Gainsboro", "LightPink", "SandyBrown", "LightGreen"
+        };
 
         bool record = false;
 
@@ -58,15 +67,25 @@ namespace Memory_4
             SelfRef = this;
             Refresh_record();
             //tabControl1.BackColor = Color.White;
+
+            GraphicsPath gp = new GraphicsPath();
+            gp.AddEllipse(0, 0, pictureBox_fon_1.Width - 3, pictureBox_fon_1.Height - 3);
+            Region rg = new Region(gp);
+            pictureBox_fon_1.Region = rg;
+
+            GraphicsPath gp_2 = new GraphicsPath();
+            gp_2.AddEllipse(0, 0, pictureBox2.Width - 3, pictureBox2.Height - 3);
+            Region rg_2 = new Region(gp_2);
+            pictureBox2.Region = rg_2;
         }
 
         private void Refresh_record()
         {//расстановка рекордстменов в таблице
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.txt");
             FileInfo fileInfo = new FileInfo(filePath);
-            
+
             int[] itog = new int[6];
-            string[,] mass = new string[6, 2];
+            string[,] mass = new string[6, 3];
 
             using (StreamReader reader = fileInfo.OpenText())
             {// чтение текста из файла
@@ -74,23 +93,17 @@ namespace Memory_4
                 string ses = null;
                 while ((s = reader.ReadLine()) != null)
                 {
-                    ses += s + '\n';
+                    ses += s + '!';
                 }
-                string[] words = ses.Split('\n');
+                string[] words = ses.Split('!');
 
                 for (int i = 0; i < words.Length - 1; i++)
                 {
                     string ce = words[i];
-                    for (int j = 0; j < 2; j++)
+                    for (int j = 0; j < 3; j++)
                     {
-                        mass[i, j] = ce.Split(' ')[j];
+                        mass[i, j] = ce.Split('_')[j];
                     }
-                }
-
-                for (int i = 0; i < words.Length - 1; i++)
-                {
-                    int ff = Convert.ToInt32(mass[i, 1]);
-                    itog[i] = ff;
                 }
             }
 
@@ -105,10 +118,17 @@ namespace Memory_4
             label2_3.Text = mass[2, 1];
             label2_4.Text = mass[3, 1];
             label2_5.Text = mass[4, 1];
+
+            picture_rec_1.Image = (Image)Properties.Resources.ResourceManager.GetObject(mass[0, 2]);
+            picture_rec_2.Image = (Image)Properties.Resources.ResourceManager.GetObject(mass[1, 2]);
+            picture_rec_3.Image = (Image)Properties.Resources.ResourceManager.GetObject(mass[2, 2]);
+            picture_rec_4.Image = (Image)Properties.Resources.ResourceManager.GetObject(mass[3, 2]);
+            picture_rec_5.Image = (Image)Properties.Resources.ResourceManager.GetObject(mass[4, 2]);
         }
 
         private void button_game_Click(object sender, EventArgs e)
         {
+            min_record = Convert.ToInt32(label2_5.Text);
             Form2_8x8 form2 = new Form2_8x8(SelfRef, Tema, min_record);
             form2.Okrugli_pictire();
             //form2.Show();
@@ -155,13 +175,13 @@ namespace Memory_4
             label1.ForeColor = Color.SteelBlue;
             label1_2.ForeColor = Color.SteelBlue;
             label2_2.ForeColor = Color.SteelBlue;
-            label2.ForeColor = Color.SteelBlue; 
+            label2.ForeColor = Color.SteelBlue;
             label1_3.ForeColor = Color.SteelBlue;
             label2_3.ForeColor = Color.SteelBlue;
-            label3.ForeColor = Color.SteelBlue; 
+            label3.ForeColor = Color.SteelBlue;
             label1_4.ForeColor = Color.SteelBlue;
             label2_4.ForeColor = Color.SteelBlue;
-            label4.ForeColor = Color.SteelBlue; 
+            label4.ForeColor = Color.SteelBlue;
             label1_5.ForeColor = Color.SteelBlue;
             label2_5.ForeColor = Color.SteelBlue;
             label5.ForeColor = Color.SteelBlue;
@@ -205,7 +225,7 @@ namespace Memory_4
             }
             catch (NullReferenceException ne)
             {
-                
+
             }
         }
 
@@ -228,11 +248,24 @@ namespace Memory_4
         {//обновление данных рекордов после нового рекорда
 
             int rer = result;
-            string[,] mass = new string[6, 2];
+            string[,] mass = new string[6, 3];
             string[] mas = new string[6];
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.txt");
             FileInfo fileInfo = new FileInfo(filePath);
+
+            string filePath_2 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
+            FileInfo fileInfo_2 = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo_2.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                profil = ses.Split('!');
+            }
 
             // чтение текста из файла
             using (StreamReader reader = fileInfo.OpenText())
@@ -241,16 +274,16 @@ namespace Memory_4
                 string ses = null;
                 while ((s = reader.ReadLine()) != null)
                 {
-                    ses += s + '\n';
+                    ses += s + '!';
                 }
-                string[] words = ses.Split('\n');
+                string[] words = ses.Split('!');
 
                 for (int i = 0; i < words.Length - 1; i++)
                 {
                     string ce = words[i];
-                    for (int j = 0; j < 2; j++)
+                    for (int j = 0; j < 3; j++)
                     {
-                        mass[i, j] = ce.Split(' ')[j];
+                        mass[i, j] = ce.Split('_')[j];
                     }
                 }
 
@@ -260,6 +293,7 @@ namespace Memory_4
                 {
                     mass[5, 0] = hero;
                     mass[5, 1] = rer.ToString();
+                    mass[5, 2] = profil[4];
                 }
 
                 for (int j = 0; j < mass.GetLength(0); j++)
@@ -271,15 +305,16 @@ namespace Memory_4
 
                         if (first < second)
                         {
+                            (mass[i + 1, 2], mass[i, 2]) = (mass[i, 2], mass[i + 1, 2]);
                             (mass[i + 1, 1], mass[i, 1]) = (mass[i, 1], mass[i + 1, 1]);
                             (mass[i + 1, 0], mass[i, 0]) = (mass[i, 0], mass[i + 1, 0]);
                         }
                     }
                 }
 
-                for(int i = 0; i < mass.GetLength(0); i++)
+                for (int i = 0; i < mass.GetLength(0); i++)
                 {
-                    mas[i] = mass[i,0];
+                    mas[i] = mass[i, 0];
                 }
                 nomer_hero = Array.IndexOf(mas, hero);
             }
@@ -307,7 +342,7 @@ namespace Memory_4
             this.Hide();
         }
 
-        public void new_record(int point) 
+        public void new_record(int point)
         {
             Poin = point;
             Form_record form_r = new Form_record(SelfRef, Poin);
@@ -459,36 +494,113 @@ namespace Memory_4
         {
             switch (nomer_hero)
             {
-                case 0: label1_1.ForeColor = disco;
-                        label2_1.ForeColor = disco;
-                        label1.ForeColor = disco; break;
+                case 0:
+                    label1_1.ForeColor = disco;
+                    label2_1.ForeColor = disco;
+                    label1.ForeColor = disco; break;
 
-                case 1: label1_2.ForeColor = disco;
-                        label2_2.ForeColor = disco;
-                        label2.ForeColor = disco; break;
+                case 1:
+                    label1_2.ForeColor = disco;
+                    label2_2.ForeColor = disco;
+                    label2.ForeColor = disco; break;
 
-                case 2: label1_3.ForeColor = disco;
-                        label2_3.ForeColor = disco;
-                        label3.ForeColor = disco; break;
+                case 2:
+                    label1_3.ForeColor = disco;
+                    label2_3.ForeColor = disco;
+                    label3.ForeColor = disco; break;
 
-                case 3: label1_4.ForeColor = disco;
-                        label2_4.ForeColor = disco;
-                        label4.ForeColor = disco; break;
+                case 3:
+                    label1_4.ForeColor = disco;
+                    label2_4.ForeColor = disco;
+                    label4.ForeColor = disco; break;
 
-                case 4: label1_5.ForeColor = disco;
-                        label2_5.ForeColor = disco;
-                        label5.ForeColor = disco; break;
+                case 4:
+                    label1_5.ForeColor = disco;
+                    label2_5.ForeColor = disco;
+                    label5.ForeColor = disco; break;
                 default: break;
             }
 
             switch (nomer_color)
             {
                 case 1: disco = Color.Fuchsia; break;
-                case 2: disco = Color.LimeGreen; 
-                        nomer_color = 0; break;
+                case 2:
+                    disco = Color.LimeGreen;
+                    nomer_color = 0; break;
                 default: break;
             }
             nomer_color++;
+        }
+
+        private void button_profil_Click(object sender, EventArgs e)
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                profil = ses.Split('!');
+            }
+            pictureBox2.Image = (Image)Properties.Resources.ResourceManager.GetObject(profil[4]);
+            pictureBox2.BackColor = Color.FromName(profil[5]);
+            this.tabControl1.SelectedIndex = 5;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_avatarka form_Avatarka = new Form_avatarka(SelfRef);
+            form_Avatarka.Show();
+        }
+
+        private void button_back_profil_Click(object sender, EventArgs e)
+        {
+            this.tabControl1.SelectedIndex = 0;
+        }
+
+        public void new_avatar()
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                profil = ses.Split('!');
+            }
+            pictureBox2.Image = (Image)Properties.Resources.ResourceManager.GetObject(profil[4]);
+            pictureBox2.BackColor = Color.FromName(profil[5]);
+
+            try
+            {
+                Form_avatarka fr = (Form_avatarka)Application.OpenForms["Form_avatarka"];
+                fr.Close();
+            }
+            catch (NullReferenceException ne)
+            {
+
+            }
+        }
+
+        public void close_happy_animal()
+        {
+            try
+            {
+                Form_happy_animal fr = (Form_happy_animal)Application.OpenForms["Form_happy_animal"];
+                fr.Close();
+            }
+            catch (NullReferenceException ne)
+            {
+
+            }
         }
     }
 }

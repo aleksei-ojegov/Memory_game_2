@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace Memory_4
         string[,] data = new string[36, 2];
         string[] proverka = new string[36];
         string[] baza = new string[36];
+        string[] profil = new string[18];
 
         PictureBox firstClicked = null;
         PictureBox secondClicked = null;
@@ -259,8 +261,64 @@ namespace Memory_4
             timer.Stop();
             //nazhat
             points = time * 8 - (nazhat - 72);
-            MessageBox.Show($"Ты нашёл все картинки!\n\nТы набрал {points} очков!", "Победа");
-            //Form1.SelfRef.tabl_rec(points);
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                profil = ses.Split('!');
+            }
+
+            MessageBox.Show($"Ты нашёл все картинки!\n\nТы набрал {points} очков !", "Победа");
+            if(tema_vidor == 1 && profil[0] == "false")
+            {
+                profil[0] = "true";
+                //MessageBox.Show($"Поздравляю !\n\nТы можешь стать петухом !", "Открыт петух");
+                Form_happy_animal form_happy_animal = new Form_happy_animal(0);
+                form_happy_animal.ShowDialog();
+            }
+
+            if (tema_vidor == 2 && profil[1] == "false")
+            {
+                profil[1] = "true";
+                //MessageBox.Show($"Поздравляю !\n\nТы можешь стать свиньёй !", "Открыта свинья");
+                //Form1.SelfRef.open_happy_animal();
+                Form_happy_animal form_happy_animal = new Form_happy_animal(1);
+                form_happy_animal.ShowDialog();
+            }
+
+            if (time >= 80 && profil[2] == "false")
+            {
+                profil[2] = "true";
+                //MessageBox.Show($"Поздравляю !\n\nТы можешь стать козлом !", "Открыт козёл");
+                Form_happy_animal form_happy_animal = new Form_happy_animal(2);
+                form_happy_animal.ShowDialog();
+            }
+
+            if (time >= 60 && profil[3] == "false")
+            {
+                profil[3] = "true";
+                //MessageBox.Show($"Поздравляю !\n\nТы можешь стать бараном !", "Открыт баран");
+                Form_happy_animal form_happy_animal = new Form_happy_animal(3);
+                form_happy_animal.ShowDialog();
+            }
+
+            File.Delete(filePath);
+            File.Create(filePath).Close();
+
+            using (StreamWriter writer = fileInfo.AppendText())
+            {
+                for (int j = 0; j < profil.GetLength(0); j++)
+                {
+                    writer.WriteLine(profil[j]);
+                }
+            }
 
             if (points > min_record_buf)
             {

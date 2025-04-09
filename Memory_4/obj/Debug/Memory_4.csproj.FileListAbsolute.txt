@@ -22,3 +22,5 @@ E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.csproj.CoreC
 E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.exe
 E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.pdb
 E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form_record.resources
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form_avatarka.resources
+E:\Visual Studio\Memory_4\Memory_game_2\Memory_4\obj\Debug\Memory_4.Form_happy_animal.resources
