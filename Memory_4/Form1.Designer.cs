@@ -87,11 +87,25 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button_save_name = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox_name_profil = new System.Windows.Forms.TextBox();
             this.button_back_profil = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_fon_1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label_pro_1_1 = new System.Windows.Forms.Label();
+            this.label_pro_1_2 = new System.Windows.Forms.Label();
+            this.label_pro_2_1 = new System.Windows.Forms.Label();
+            this.label_pro_2_2 = new System.Windows.Forms.Label();
+            this.label_pro_3_1 = new System.Windows.Forms.Label();
+            this.label_pro_3_2 = new System.Windows.Forms.Label();
+            this.label_pro_4_1 = new System.Windows.Forms.Label();
+            this.label_pro_4_2 = new System.Windows.Forms.Label();
+            this.label_pro_5_1 = new System.Windows.Forms.Label();
+            this.label_pro_5_2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,6 +124,7 @@
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fon_1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_game
@@ -432,7 +447,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(33, 31);
+            this.label7.Location = new System.Drawing.Point(33, 17);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(273, 29);
             this.label7.TabIndex = 10;
@@ -468,7 +483,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1_5, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.picture_rec_1, 1, 0);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 76);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 64);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -724,7 +739,7 @@
             this.button_menu_4_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_menu_4_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_menu_4_back.ForeColor = System.Drawing.Color.Black;
-            this.button_menu_4_back.Location = new System.Drawing.Point(97, 325);
+            this.button_menu_4_back.Location = new System.Drawing.Point(97, 323);
             this.button_menu_4_back.Name = "button_menu_4_back";
             this.button_menu_4_back.Size = new System.Drawing.Size(137, 26);
             this.button_menu_4_back.TabIndex = 6;
@@ -888,8 +903,12 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.White;
+            this.tabPage6.Controls.Add(this.tableLayoutPanel2);
+            this.tabPage6.Controls.Add(this.label12);
+            this.tabPage6.Controls.Add(this.button_save_name);
+            this.tabPage6.Controls.Add(this.label8);
+            this.tabPage6.Controls.Add(this.textBox_name_profil);
             this.tabPage6.Controls.Add(this.button_back_profil);
-            this.tabPage6.Controls.Add(this.button1);
             this.tabPage6.Controls.Add(this.pictureBox2);
             this.tabPage6.Controls.Add(this.pictureBox_fon_1);
             this.tabPage6.Location = new System.Drawing.Point(4, 14);
@@ -898,6 +917,52 @@
             this.tabPage6.Size = new System.Drawing.Size(351, 385);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(247, 121);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 17);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Это вы !";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button_save_name
+            // 
+            this.button_save_name.BackColor = System.Drawing.Color.LightBlue;
+            this.button_save_name.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_save_name.FlatAppearance.BorderSize = 0;
+            this.button_save_name.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.button_save_name.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.button_save_name.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_save_name.Location = new System.Drawing.Point(75, 94);
+            this.button_save_name.Name = "button_save_name";
+            this.button_save_name.Size = new System.Drawing.Size(75, 23);
+            this.button_save_name.TabIndex = 12;
+            this.button_save_name.Text = "Сохранить";
+            this.button_save_name.UseVisualStyleBackColor = false;
+            this.button_save_name.Click += new System.EventHandler(this.button_save_name_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(69, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Ваше имя";
+            // 
+            // textBox_name_profil
+            // 
+            this.textBox_name_profil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_name_profil.Location = new System.Drawing.Point(25, 65);
+            this.textBox_name_profil.Name = "textBox_name_profil";
+            this.textBox_name_profil.Size = new System.Drawing.Size(175, 23);
+            this.textBox_name_profil.TabIndex = 10;
+            this.textBox_name_profil.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button_back_profil
             // 
@@ -917,40 +982,189 @@
             this.button_back_profil.UseVisualStyleBackColor = false;
             this.button_back_profil.Click += new System.EventHandler(this.button_back_profil_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(235, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.LightBlue;
             this.pictureBox2.Image = global::Memory_4.Properties.Resources.krisa;
-            this.pictureBox2.Location = new System.Drawing.Point(235, 30);
+            this.pictureBox2.Location = new System.Drawing.Point(236, 28);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 80);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picture_profil_down);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.picture_profil_leave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.picture_profil_hover);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_profil_hover);
             // 
             // pictureBox_fon_1
             // 
             this.pictureBox_fon_1.BackColor = System.Drawing.Color.Khaki;
-            this.pictureBox_fon_1.Location = new System.Drawing.Point(227, 22);
+            this.pictureBox_fon_1.Location = new System.Drawing.Point(228, 20);
             this.pictureBox_fon_1.Name = "pictureBox_fon_1";
             this.pictureBox_fon_1.Size = new System.Drawing.Size(96, 96);
             this.pictureBox_fon_1.TabIndex = 6;
             this.pictureBox_fon_1.TabStop = false;
+            this.pictureBox_fon_1.Click += new System.EventHandler(this.button1_Click);
+            this.pictureBox_fon_1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picture_profil_down);
+            this.pictureBox_fon_1.MouseLeave += new System.EventHandler(this.picture_profil_leave);
+            this.pictureBox_fon_1.MouseHover += new System.EventHandler(this.picture_profil_hover);
+            this.pictureBox_fon_1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picture_profil_hover);
             // 
             // timer1
             // 
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.00961F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.99039F));
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_5_2, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_5_1, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_4_2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_4_1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_3_2, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_3_1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_2_2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_2_1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_1_2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_1_1, 0, 0);
+            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 143);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(295, 163);
+            this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // label_pro_1_1
+            // 
+            this.label_pro_1_1.AutoSize = true;
+            this.label_pro_1_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_1_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_1_1.Location = new System.Drawing.Point(4, 1);
+            this.label_pro_1_1.Name = "label_pro_1_1";
+            this.label_pro_1_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_1_1.TabIndex = 0;
+            this.label_pro_1_1.Text = " Количество игр";
+            this.label_pro_1_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_1_2
+            // 
+            this.label_pro_1_2.AutoSize = true;
+            this.label_pro_1_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_1_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_1_2.Location = new System.Drawing.Point(113, 1);
+            this.label_pro_1_2.Name = "label_pro_1_2";
+            this.label_pro_1_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_1_2.TabIndex = 1;
+            this.label_pro_1_2.Text = " ";
+            this.label_pro_1_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_2_1
+            // 
+            this.label_pro_2_1.AutoSize = true;
+            this.label_pro_2_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_2_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_2_1.Location = new System.Drawing.Point(4, 33);
+            this.label_pro_2_1.Name = "label_pro_2_1";
+            this.label_pro_2_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_2_1.TabIndex = 2;
+            this.label_pro_2_1.Text = " Любимая тема";
+            this.label_pro_2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_2_2
+            // 
+            this.label_pro_2_2.AutoSize = true;
+            this.label_pro_2_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_2_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_2_2.Location = new System.Drawing.Point(113, 33);
+            this.label_pro_2_2.Name = "label_pro_2_2";
+            this.label_pro_2_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_2_2.TabIndex = 3;
+            this.label_pro_2_2.Text = " ";
+            this.label_pro_2_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_3_1
+            // 
+            this.label_pro_3_1.AutoSize = true;
+            this.label_pro_3_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_3_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_3_1.Location = new System.Drawing.Point(4, 65);
+            this.label_pro_3_1.Name = "label_pro_3_1";
+            this.label_pro_3_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_3_1.TabIndex = 4;
+            this.label_pro_3_1.Text = " Любимая сложность";
+            this.label_pro_3_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_3_2
+            // 
+            this.label_pro_3_2.AutoSize = true;
+            this.label_pro_3_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_3_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_3_2.Location = new System.Drawing.Point(113, 65);
+            this.label_pro_3_2.Name = "label_pro_3_2";
+            this.label_pro_3_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_3_2.TabIndex = 5;
+            this.label_pro_3_2.Text = " ";
+            this.label_pro_3_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_4_1
+            // 
+            this.label_pro_4_1.AutoSize = true;
+            this.label_pro_4_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_4_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_4_1.Location = new System.Drawing.Point(4, 97);
+            this.label_pro_4_1.Name = "label_pro_4_1";
+            this.label_pro_4_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_4_1.TabIndex = 6;
+            this.label_pro_4_1.Text = " Процент побед";
+            this.label_pro_4_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_4_2
+            // 
+            this.label_pro_4_2.AutoSize = true;
+            this.label_pro_4_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_4_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_4_2.Location = new System.Drawing.Point(113, 97);
+            this.label_pro_4_2.Name = "label_pro_4_2";
+            this.label_pro_4_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_4_2.TabIndex = 7;
+            this.label_pro_4_2.Text = " ";
+            this.label_pro_4_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_5_1
+            // 
+            this.label_pro_5_1.AutoSize = true;
+            this.label_pro_5_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_5_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_5_1.Location = new System.Drawing.Point(4, 129);
+            this.label_pro_5_1.Name = "label_pro_5_1";
+            this.label_pro_5_1.Size = new System.Drawing.Size(102, 33);
+            this.label_pro_5_1.TabIndex = 8;
+            this.label_pro_5_1.Text = "Количество найденых пар";
+            this.label_pro_5_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_5_2
+            // 
+            this.label_pro_5_2.AutoSize = true;
+            this.label_pro_5_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_5_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_5_2.Location = new System.Drawing.Point(113, 129);
+            this.label_pro_5_2.Name = "label_pro_5_2";
+            this.label_pro_5_2.Size = new System.Drawing.Size(178, 33);
+            this.label_pro_5_2.TabIndex = 9;
+            this.label_pro_5_2.Text = " ";
+            this.label_pro_5_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -990,8 +1204,11 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fon_1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1050,7 +1267,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox_fon_1;
         private System.Windows.Forms.Button button_profil;
@@ -1060,6 +1276,21 @@
         private System.Windows.Forms.PictureBox picture_rec_3;
         private System.Windows.Forms.PictureBox picture_rec_2;
         private System.Windows.Forms.PictureBox picture_rec_1;
+        private System.Windows.Forms.Button button_save_name;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox_name_profil;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label_pro_4_2;
+        private System.Windows.Forms.Label label_pro_4_1;
+        private System.Windows.Forms.Label label_pro_3_2;
+        private System.Windows.Forms.Label label_pro_3_1;
+        private System.Windows.Forms.Label label_pro_2_2;
+        private System.Windows.Forms.Label label_pro_2_1;
+        private System.Windows.Forms.Label label_pro_1_2;
+        private System.Windows.Forms.Label label_pro_1_1;
+        private System.Windows.Forms.Label label_pro_5_2;
+        private System.Windows.Forms.Label label_pro_5_1;
     }
 }
 

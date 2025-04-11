@@ -38,6 +38,7 @@ namespace Memory_4
         int nazhat = 0;
         int tema_vidor = 0;
         int min_record_buf = 0;
+        int v_igre = 0;
 
         bool ender = false;
         bool new_record = false;
@@ -120,7 +121,11 @@ namespace Memory_4
         private void Form1_Closed(object sender, System.EventArgs e)
         {
             timer.Stop();
-            if(!ender)
+            if (v_igre == 1)
+            {
+                Form1.SelfRef.statistica_game(1, tema_vidor);
+            }
+            if (!ender)
             {
                 Form1.SelfRef.Close();
             }
@@ -166,6 +171,7 @@ namespace Memory_4
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            v_igre = 1;
             nazhat++;
             if (timer1.Enabled == true)
                 return;
@@ -293,7 +299,7 @@ namespace Memory_4
                 form_happy_animal.ShowDialog();
             }
 
-            if (time >= 80 && profil[2] == "false")
+            if (time >= 60 && profil[2] == "false")
             {
                 profil[2] = "true";
                 //MessageBox.Show($"Поздравляю !\n\nТы можешь стать козлом !", "Открыт козёл");
@@ -301,7 +307,7 @@ namespace Memory_4
                 form_happy_animal.ShowDialog();
             }
 
-            if (time >= 60 && profil[3] == "false")
+            if (time >= 75 && profil[3] == "false")
             {
                 profil[3] = "true";
                 //MessageBox.Show($"Поздравляю !\n\nТы можешь стать бараном !", "Открыт баран");
@@ -334,7 +340,7 @@ namespace Memory_4
                 ResetImages();
                 Reset_time();
             }
-
+            Form1.SelfRef.statistica_game(1, tema_vidor);
         }
 
         private void ResetImages() //функция сброса графичиских полей после раунда
@@ -364,6 +370,11 @@ namespace Memory_4
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            if (v_igre == 1)
+            {
+                Form1.SelfRef.statistica_game(1, tema_vidor);
+            }
+            v_igre = 0;
             nazhat = 0;
             ResetImages();
             toolStripTextBox1.Text = "02: 00";

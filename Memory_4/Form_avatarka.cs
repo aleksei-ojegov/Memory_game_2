@@ -10,6 +10,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Memory_4
 {
@@ -17,7 +19,7 @@ namespace Memory_4
     {
         List<PictureBox> pictureBoxes = new List<PictureBox>();
         List<PictureBox> pictureBoxes_2 = new List<PictureBox>();
-        List<Label> labels = new List<Label>();
+        List<TextBox> textBoxes = new List<TextBox>();
 
         string[] dark_animal = new string[4]
         {
@@ -31,7 +33,11 @@ namespace Memory_4
         {
             "LightBlue", "Gainsboro", "LightPink", "SandyBrown", "LightGreen"
         };
-        
+        string[] color_font = new string[5]
+        {
+            "SteelBlue", "DimGray", "MediumVioletRed", "SaddleBrown", "SeaGreen"
+        };
+
         int first = 0;
         int second = 0;
 
@@ -42,27 +48,30 @@ namespace Memory_4
 
         string[] words = new string[18];
 
+        Font font = new Font("Microsoft Sans Serif", 14.0f,
+                        FontStyle.Bold );
+
         public Form_avatarka(Form1 ParentRef)
         {
             InitializeComponent();
 
-            GraphicsPath gp = new GraphicsPath();
-            gp.AddEllipse(0, 0, pictureBox1.Width - 3, pictureBox1.Height - 3);
-            Region rg = new Region(gp);
-            pictureBox1.Region = rg;
-            pictureBox2.Region = rg;
-            pictureBox3.Region = rg;
-            pictureBox4.Region = rg;
-            pictureBox5.Region = rg;
+            //GraphicsPath gp = new GraphicsPath();
+            //gp.AddEllipse(0, 0, pictureBox1.Width - 3, pictureBox1.Height - 3);
+            //Region rg = new Region(gp);
+            //pictureBox1.Region = rg;
+            //pictureBox2.Region = rg;
+            //pictureBox3.Region = rg;
+            //pictureBox4.Region = rg;
+            //pictureBox5.Region = rg;
 
-            GraphicsPath gp_2 = new GraphicsPath();
-            gp_2.AddEllipse(0, 0, pictureBox_fon_1.Width - 3, pictureBox_fon_1.Height - 3);
-            Region rg_2 = new Region(gp_2);
-            pictureBox_fon_1.Region = rg_2;
-            pictureBox_fon_2.Region = rg_2;
-            pictureBox_fon_3.Region = rg_2;
-            pictureBox_fon_4.Region = rg_2;
-            pictureBox_fon_5.Region = rg_2;
+            //GraphicsPath gp_2 = new GraphicsPath();
+            //gp_2.AddEllipse(0, 0, pictureBox_fon_1.Width - 3, pictureBox_fon_1.Height - 3);
+            //Region rg_2 = new Region(gp_2);
+            //pictureBox_fon_1.Region = rg_2;
+            //pictureBox_fon_2.Region = rg_2;
+            //pictureBox_fon_3.Region = rg_2;
+            //pictureBox_fon_4.Region = rg_2;
+            //pictureBox_fon_5.Region = rg_2;
 
             pictureBoxes.Add(pictureBox_fon_1);
             pictureBoxes.Add(pictureBox_fon_2);
@@ -76,17 +85,20 @@ namespace Memory_4
             pictureBoxes_2.Add(pictureBox4);
             pictureBoxes_2.Add(pictureBox5);
 
-            labels.Add(label1);
-            labels.Add(label2);
-            labels.Add(label3);
-            labels.Add(label4);
-            labels.Add(label5);
+            textBoxes.Add(textBox1);
+            textBoxes.Add(textBox2);
+            textBoxes.Add(textBox3);
+            textBoxes.Add(textBox4);
+            textBoxes.Add(textBox5);
 
-            label1.Text = "Крыса";
-            label2.Text = "Петух";
-            label3.Text = "Свинья";
-            label4.Text = "Козёл";
-            label5.Text = "Баран";
+            textBox1.Text = "Крыса";
+            textBox2.Text = "Петух";
+            textBox3.Text = "Свинья";
+            textBox4.Text = "Козёл";
+            textBox5.Text = "Баран";
+
+            textBoxes[0].Font = font;
+            textBoxes[0].ForeColor = Color.SteelBlue;
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
             FileInfo fileInfo = new FileInfo(filePath);
@@ -108,8 +120,14 @@ namespace Memory_4
                     pictureBoxes[i + 1].BackColor = Color.FromArgb(64, 64, 64);
                     pictureBoxes_2[i + 1].BackColor = Color.Gray;
                     pictureBoxes_2[i + 1].Image = (Image)Properties.Resources.ResourceManager.GetObject(dark_animal[i]);
-                    labels[i + 1].Text = words[i+6];
-                    labels[i + 1].ForeColor = Color.Red;
+                    textBoxes[i + 1].Text = words[i + 6];
+                    textBoxes[i + 1].Enabled = false;
+                    //textBoxes[i + 1].ForeColor = Color.Red;
+                }
+                else
+                {
+                    textBoxes[i + 1].Font = font;
+                    textBoxes[i + 1].ForeColor = Color.FromName(color_font[i + 1]);
                 }
             }
         }
@@ -118,6 +136,11 @@ namespace Memory_4
         {
             PictureBox pictureBox = sender as PictureBox;
             first = pictureBoxes_2.IndexOf(pictureBox);
+
+            if (first == -1) //если навели на фоновую рамку
+            {
+                first = pictureBoxes.IndexOf(pictureBox);
+            }
 
             switch (first)
             {
@@ -139,18 +162,10 @@ namespace Memory_4
                     break;
                 default: break;
             }
+
             words[4] = animal[first];
             words[5] = color[first];
-            PictureBox door = pictureBoxes[second];
-            door.BackColor = Color.Khaki;
 
-            PictureBox rety = pictureBoxes[first];
-            rety.BackColor = Color.Orange;
-            second = first;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
             FileInfo fileInfo = new FileInfo(filePath);
 
@@ -165,6 +180,86 @@ namespace Memory_4
                 }
             }
             Form1.SelfRef.new_avatar();
+        }
+
+        private void picture_move(object sender, MouseEventArgs e)
+        {//при указании мыши на компонент
+            PictureBox pictureBox = sender as PictureBox;
+            first = pictureBoxes_2.IndexOf(pictureBox);
+
+            if (first == -1) //если навели на фоновую рамку
+            {
+                first = pictureBoxes.IndexOf(pictureBox);
+            }
+
+            switch (first)
+            {
+                case 1:
+                    if (words[0] == "false")
+                        return;
+                    break;
+                case 2:
+                    if (words[1] == "false")
+                        return;
+                    break;
+                case 3:
+                    if (words[2] == "false")
+                        return;
+                    break;
+                case 4:
+                    if (words[3] == "false")
+                        return;
+                    break;
+                default: break;
+            }
+
+            PictureBox rety = pictureBoxes[first];
+            rety.BackColor = Color.Gold;
+        }
+
+        private void picture_leave(object sender, EventArgs e)
+        {//при выходе курсора за пределы картинки
+            PictureBox pictureBox = sender as PictureBox;
+            first = pictureBoxes_2.IndexOf(pictureBox);
+
+            if (first == -1) //если навели на фоновую рамку
+            {
+                first = pictureBoxes.IndexOf(pictureBox);
+            }
+
+            switch (first)
+            {
+                case 1:
+                    if (words[0] == "false")
+                        return;
+                    break;
+                case 2:
+                    if (words[1] == "false")
+                        return;
+                    break;
+                case 3:
+                    if (words[2] == "false")
+                        return;
+                    break;
+                case 4:
+                    if (words[3] == "false")
+                        return;
+                    break;
+                default: break;
+            }
+
+            PictureBox rety = pictureBoxes[first];
+            rety.BackColor = Color.Khaki;
+        }
+
+        private void picture_double_click(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void Form_avatarka_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
