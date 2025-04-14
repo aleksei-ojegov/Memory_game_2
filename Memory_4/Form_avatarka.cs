@@ -174,7 +174,7 @@ namespace Memory_4
 
             using (StreamWriter writer = fileInfo.AppendText())
             {
-                for (int i = 0; i < words.GetLength(0); i++)
+                for (int i = 0; i < words.GetLength(0) - 1; i++)
                 {
                     writer.WriteLine(words[i]);
                 }

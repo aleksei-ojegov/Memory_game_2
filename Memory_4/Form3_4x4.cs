@@ -35,6 +35,8 @@ namespace Memory_4
         int nazhat = 0;
         int tema_vidor = 0;
         int min_record_buf = 0;
+        int v_igre = 0;
+        int para = 0;
 
         bool ender = false;
         bool new_record = false;
@@ -118,6 +120,10 @@ namespace Memory_4
         {
             timer.Stop();
             //MessageBox.Show("form closed nachalo");
+            if (v_igre == 1)
+            {
+                Form1.SelfRef.statistica_game(0, tema_vidor, 0, para);
+            }
             if (!ender)
             {
                 //MessageBox.Show("form closed");
@@ -182,6 +188,7 @@ namespace Memory_4
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            v_igre = 1;
             nazhat++;
             if (timer1.Enabled == true)
                 return;
@@ -233,6 +240,7 @@ namespace Memory_4
                     secondClicked = null;
                     firstClick = null;
                     secondClick = null;
+                    para++;
 
                     CheckForWinner();
                     return;
@@ -275,7 +283,11 @@ namespace Memory_4
 
             points = time * 2 - (nazhat - 32);
             MessageBox.Show($"Ты нашёл все картинки!\n\nТы набрал {points} очков!", "Победа");
-            if(points > min_record_buf)
+
+            Form1.SelfRef.statistica_game(0, tema_vidor, 1, para);
+            v_igre = 0;
+
+            if (points > min_record_buf)
             {
                 new_record = true;
                 ender = true;
@@ -427,10 +439,16 @@ namespace Memory_4
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
+            if (v_igre == 1)
+            {
+                Form1.SelfRef.statistica_game(0, tema_vidor, 0, para);
+            }
+            v_igre = 0;
             nazhat = 0;
             ResetImages();
             toolStripTextBox1.Text = "02: 00";
             time = 120;
+            para = 0;
         }
     }
 }

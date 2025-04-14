@@ -87,7 +87,17 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.label12 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label_pro_5_2 = new System.Windows.Forms.Label();
+            this.label_pro_5_1 = new System.Windows.Forms.Label();
+            this.label_pro_4_2 = new System.Windows.Forms.Label();
+            this.label_pro_4_1 = new System.Windows.Forms.Label();
+            this.label_pro_3_2 = new System.Windows.Forms.Label();
+            this.label_pro_3_1 = new System.Windows.Forms.Label();
+            this.label_pro_2_2 = new System.Windows.Forms.Label();
+            this.label_pro_2_1 = new System.Windows.Forms.Label();
+            this.label_pro_1_2 = new System.Windows.Forms.Label();
+            this.label_pro_1_1 = new System.Windows.Forms.Label();
             this.button_save_name = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_name_profil = new System.Windows.Forms.TextBox();
@@ -95,17 +105,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_fon_1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label_pro_1_1 = new System.Windows.Forms.Label();
-            this.label_pro_1_2 = new System.Windows.Forms.Label();
-            this.label_pro_2_1 = new System.Windows.Forms.Label();
-            this.label_pro_2_2 = new System.Windows.Forms.Label();
-            this.label_pro_3_1 = new System.Windows.Forms.Label();
-            this.label_pro_3_2 = new System.Windows.Forms.Label();
-            this.label_pro_4_1 = new System.Windows.Forms.Label();
-            this.label_pro_4_2 = new System.Windows.Forms.Label();
-            this.label_pro_5_1 = new System.Windows.Forms.Label();
-            this.label_pro_5_2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,9 +121,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_book)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fon_1)).BeginInit();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_game
@@ -904,7 +903,6 @@
             // 
             this.tabPage6.BackColor = System.Drawing.Color.White;
             this.tabPage6.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage6.Controls.Add(this.label12);
             this.tabPage6.Controls.Add(this.button_save_name);
             this.tabPage6.Controls.Add(this.label8);
             this.tabPage6.Controls.Add(this.textBox_name_profil);
@@ -918,16 +916,159 @@
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "tabPage6";
             // 
-            // label12
+            // tableLayoutPanel2
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(247, 121);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 17);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Это вы !";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.00961F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.99039F));
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_5_2, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_5_1, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_4_2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_4_1, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_3_2, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_3_1, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_2_2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_2_1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_1_2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label_pro_1_1, 0, 0);
+            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 143);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(295, 163);
+            this.tableLayoutPanel2.TabIndex = 14;
+            // 
+            // label_pro_5_2
+            // 
+            this.label_pro_5_2.AutoSize = true;
+            this.label_pro_5_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_5_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_pro_5_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_5_2.Location = new System.Drawing.Point(113, 129);
+            this.label_pro_5_2.Name = "label_pro_5_2";
+            this.label_pro_5_2.Size = new System.Drawing.Size(178, 33);
+            this.label_pro_5_2.TabIndex = 9;
+            this.label_pro_5_2.Text = " ";
+            this.label_pro_5_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_5_1
+            // 
+            this.label_pro_5_1.AutoSize = true;
+            this.label_pro_5_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_5_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_5_1.Location = new System.Drawing.Point(4, 129);
+            this.label_pro_5_1.Name = "label_pro_5_1";
+            this.label_pro_5_1.Size = new System.Drawing.Size(102, 33);
+            this.label_pro_5_1.TabIndex = 8;
+            this.label_pro_5_1.Text = "Количество найденых пар";
+            this.label_pro_5_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_4_2
+            // 
+            this.label_pro_4_2.AutoSize = true;
+            this.label_pro_4_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_4_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_pro_4_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_4_2.Location = new System.Drawing.Point(113, 97);
+            this.label_pro_4_2.Name = "label_pro_4_2";
+            this.label_pro_4_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_4_2.TabIndex = 7;
+            this.label_pro_4_2.Text = " ";
+            this.label_pro_4_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_4_1
+            // 
+            this.label_pro_4_1.AutoSize = true;
+            this.label_pro_4_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_4_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_4_1.Location = new System.Drawing.Point(4, 97);
+            this.label_pro_4_1.Name = "label_pro_4_1";
+            this.label_pro_4_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_4_1.TabIndex = 6;
+            this.label_pro_4_1.Text = " Процент побед";
+            this.label_pro_4_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_3_2
+            // 
+            this.label_pro_3_2.AutoSize = true;
+            this.label_pro_3_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_3_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_pro_3_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_3_2.Location = new System.Drawing.Point(113, 65);
+            this.label_pro_3_2.Name = "label_pro_3_2";
+            this.label_pro_3_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_3_2.TabIndex = 5;
+            this.label_pro_3_2.Text = " ";
+            this.label_pro_3_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_3_1
+            // 
+            this.label_pro_3_1.AutoSize = true;
+            this.label_pro_3_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_3_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_3_1.Location = new System.Drawing.Point(4, 65);
+            this.label_pro_3_1.Name = "label_pro_3_1";
+            this.label_pro_3_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_3_1.TabIndex = 4;
+            this.label_pro_3_1.Text = " Любимая сложность";
+            this.label_pro_3_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_2_2
+            // 
+            this.label_pro_2_2.AutoSize = true;
+            this.label_pro_2_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_pro_2_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_2_2.Location = new System.Drawing.Point(113, 33);
+            this.label_pro_2_2.Name = "label_pro_2_2";
+            this.label_pro_2_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_2_2.TabIndex = 3;
+            this.label_pro_2_2.Text = " ";
+            this.label_pro_2_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_2_1
+            // 
+            this.label_pro_2_1.AutoSize = true;
+            this.label_pro_2_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_2_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_2_1.Location = new System.Drawing.Point(4, 33);
+            this.label_pro_2_1.Name = "label_pro_2_1";
+            this.label_pro_2_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_2_1.TabIndex = 2;
+            this.label_pro_2_1.Text = " Любимая тема";
+            this.label_pro_2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_1_2
+            // 
+            this.label_pro_1_2.AutoSize = true;
+            this.label_pro_1_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_1_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_pro_1_2.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_1_2.Location = new System.Drawing.Point(113, 1);
+            this.label_pro_1_2.Name = "label_pro_1_2";
+            this.label_pro_1_2.Size = new System.Drawing.Size(178, 31);
+            this.label_pro_1_2.TabIndex = 1;
+            this.label_pro_1_2.Text = " ";
+            this.label_pro_1_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label_pro_1_1
+            // 
+            this.label_pro_1_1.AutoSize = true;
+            this.label_pro_1_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_pro_1_1.ForeColor = System.Drawing.Color.Black;
+            this.label_pro_1_1.Location = new System.Drawing.Point(4, 1);
+            this.label_pro_1_1.Name = "label_pro_1_1";
+            this.label_pro_1_1.Size = new System.Drawing.Size(102, 31);
+            this.label_pro_1_1.TabIndex = 0;
+            this.label_pro_1_1.Text = " Количество игр";
+            this.label_pro_1_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button_save_name
             // 
@@ -1017,155 +1158,6 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.00961F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.99039F));
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_5_2, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_5_1, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_4_2, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_4_1, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_3_2, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_3_1, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_2_2, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_2_1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_1_2, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label_pro_1_1, 0, 0);
-            this.tableLayoutPanel2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 143);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(295, 163);
-            this.tableLayoutPanel2.TabIndex = 14;
-            // 
-            // label_pro_1_1
-            // 
-            this.label_pro_1_1.AutoSize = true;
-            this.label_pro_1_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_1_1.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_1_1.Location = new System.Drawing.Point(4, 1);
-            this.label_pro_1_1.Name = "label_pro_1_1";
-            this.label_pro_1_1.Size = new System.Drawing.Size(102, 31);
-            this.label_pro_1_1.TabIndex = 0;
-            this.label_pro_1_1.Text = " Количество игр";
-            this.label_pro_1_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_1_2
-            // 
-            this.label_pro_1_2.AutoSize = true;
-            this.label_pro_1_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_1_2.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_1_2.Location = new System.Drawing.Point(113, 1);
-            this.label_pro_1_2.Name = "label_pro_1_2";
-            this.label_pro_1_2.Size = new System.Drawing.Size(178, 31);
-            this.label_pro_1_2.TabIndex = 1;
-            this.label_pro_1_2.Text = " ";
-            this.label_pro_1_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_2_1
-            // 
-            this.label_pro_2_1.AutoSize = true;
-            this.label_pro_2_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_2_1.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_2_1.Location = new System.Drawing.Point(4, 33);
-            this.label_pro_2_1.Name = "label_pro_2_1";
-            this.label_pro_2_1.Size = new System.Drawing.Size(102, 31);
-            this.label_pro_2_1.TabIndex = 2;
-            this.label_pro_2_1.Text = " Любимая тема";
-            this.label_pro_2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_2_2
-            // 
-            this.label_pro_2_2.AutoSize = true;
-            this.label_pro_2_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_2_2.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_2_2.Location = new System.Drawing.Point(113, 33);
-            this.label_pro_2_2.Name = "label_pro_2_2";
-            this.label_pro_2_2.Size = new System.Drawing.Size(178, 31);
-            this.label_pro_2_2.TabIndex = 3;
-            this.label_pro_2_2.Text = " ";
-            this.label_pro_2_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_3_1
-            // 
-            this.label_pro_3_1.AutoSize = true;
-            this.label_pro_3_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_3_1.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_3_1.Location = new System.Drawing.Point(4, 65);
-            this.label_pro_3_1.Name = "label_pro_3_1";
-            this.label_pro_3_1.Size = new System.Drawing.Size(102, 31);
-            this.label_pro_3_1.TabIndex = 4;
-            this.label_pro_3_1.Text = " Любимая сложность";
-            this.label_pro_3_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_3_2
-            // 
-            this.label_pro_3_2.AutoSize = true;
-            this.label_pro_3_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_3_2.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_3_2.Location = new System.Drawing.Point(113, 65);
-            this.label_pro_3_2.Name = "label_pro_3_2";
-            this.label_pro_3_2.Size = new System.Drawing.Size(178, 31);
-            this.label_pro_3_2.TabIndex = 5;
-            this.label_pro_3_2.Text = " ";
-            this.label_pro_3_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_4_1
-            // 
-            this.label_pro_4_1.AutoSize = true;
-            this.label_pro_4_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_4_1.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_4_1.Location = new System.Drawing.Point(4, 97);
-            this.label_pro_4_1.Name = "label_pro_4_1";
-            this.label_pro_4_1.Size = new System.Drawing.Size(102, 31);
-            this.label_pro_4_1.TabIndex = 6;
-            this.label_pro_4_1.Text = " Процент побед";
-            this.label_pro_4_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_4_2
-            // 
-            this.label_pro_4_2.AutoSize = true;
-            this.label_pro_4_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_4_2.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_4_2.Location = new System.Drawing.Point(113, 97);
-            this.label_pro_4_2.Name = "label_pro_4_2";
-            this.label_pro_4_2.Size = new System.Drawing.Size(178, 31);
-            this.label_pro_4_2.TabIndex = 7;
-            this.label_pro_4_2.Text = " ";
-            this.label_pro_4_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_5_1
-            // 
-            this.label_pro_5_1.AutoSize = true;
-            this.label_pro_5_1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_5_1.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_5_1.Location = new System.Drawing.Point(4, 129);
-            this.label_pro_5_1.Name = "label_pro_5_1";
-            this.label_pro_5_1.Size = new System.Drawing.Size(102, 33);
-            this.label_pro_5_1.TabIndex = 8;
-            this.label_pro_5_1.Text = "Количество найденых пар";
-            this.label_pro_5_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label_pro_5_2
-            // 
-            this.label_pro_5_2.AutoSize = true;
-            this.label_pro_5_2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_pro_5_2.ForeColor = System.Drawing.Color.Black;
-            this.label_pro_5_2.Location = new System.Drawing.Point(113, 129);
-            this.label_pro_5_2.Name = "label_pro_5_2";
-            this.label_pro_5_2.Size = new System.Drawing.Size(178, 33);
-            this.label_pro_5_2.TabIndex = 9;
-            this.label_pro_5_2.Text = " ";
-            this.label_pro_5_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1205,10 +1197,10 @@
             this.menuStrip1.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fon_1)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fon_1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1279,7 +1271,6 @@
         private System.Windows.Forms.Button button_save_name;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_name_profil;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label_pro_4_2;
         private System.Windows.Forms.Label label_pro_4_1;

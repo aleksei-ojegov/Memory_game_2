@@ -39,6 +39,7 @@ namespace Memory_4
         int tema_vidor = 0;
         int min_record_buf = 0;
         int v_igre = 0;
+        int para = 0;
 
         bool ender = false;
         bool new_record = false;
@@ -123,7 +124,7 @@ namespace Memory_4
             timer.Stop();
             if (v_igre == 1)
             {
-                Form1.SelfRef.statistica_game(1, tema_vidor);
+                Form1.SelfRef.statistica_game(1, tema_vidor, 0, para);
             }
             if (!ender)
             {
@@ -223,6 +224,7 @@ namespace Memory_4
                     secondClicked = null;
                     firstClick = null;
                     secondClick = null;
+                    para++;
 
                     CheckForWinner();
                     return;
@@ -299,7 +301,7 @@ namespace Memory_4
                 form_happy_animal.ShowDialog();
             }
 
-            if (time >= 60 && profil[2] == "false")
+            if (time >= 45 && profil[2] == "false")
             {
                 profil[2] = "true";
                 //MessageBox.Show($"Поздравляю !\n\nТы можешь стать козлом !", "Открыт козёл");
@@ -307,7 +309,7 @@ namespace Memory_4
                 form_happy_animal.ShowDialog();
             }
 
-            if (time >= 75 && profil[3] == "false")
+            if (time >= 60 && profil[3] == "false")
             {
                 profil[3] = "true";
                 //MessageBox.Show($"Поздравляю !\n\nТы можешь стать бараном !", "Открыт баран");
@@ -320,11 +322,13 @@ namespace Memory_4
 
             using (StreamWriter writer = fileInfo.AppendText())
             {
-                for (int j = 0; j < profil.GetLength(0); j++)
+                for (int j = 0; j < profil.GetLength(0) - 1; j++)
                 {
                     writer.WriteLine(profil[j]);
                 }
             }
+            Form1.SelfRef.statistica_game(1, tema_vidor, 1, para);
+            v_igre = 0;
 
             if (points > min_record_buf)
             {
@@ -340,7 +344,6 @@ namespace Memory_4
                 ResetImages();
                 Reset_time();
             }
-            Form1.SelfRef.statistica_game(1, tema_vidor);
         }
 
         private void ResetImages() //функция сброса графичиских полей после раунда
@@ -372,13 +375,14 @@ namespace Memory_4
         {
             if (v_igre == 1)
             {
-                Form1.SelfRef.statistica_game(1, tema_vidor);
+                Form1.SelfRef.statistica_game(1, tema_vidor, 0, para);
             }
             v_igre = 0;
             nazhat = 0;
             ResetImages();
             toolStripTextBox1.Text = "02: 00";
             time = 120;
+            para = 0;
         }
 
         private void Reset_time()
@@ -401,6 +405,11 @@ namespace Memory_4
                     MessageBox.Show("Время вышло");
                     ResetImages();
                     Reset_time();
+
+                    //if (v_igre == 1)
+                    //{
+                    //    Form1.SelfRef.statistica_game(1, tema_vidor);
+                    //}
                 }
 
 

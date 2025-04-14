@@ -14,6 +14,7 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.CompilerServices;
+using ToolTip = System.Windows.Forms.ToolTip;
 
 namespace Memory_4
 {
@@ -63,11 +64,19 @@ namespace Memory_4
         int counter_game = 0;
         int counter_level_game = 0;
         int counter_tema_game = 0;
+        int victory_count = 0;
+        int para_count = 0;
 
         int[] level_game = new int[2];
         int[] tema_game = new int[2];
 
         Color disco = new Color();
+        Font font_winner = new Font("Microsoft Sans Serif", 9.0f,
+                        FontStyle.Regular);
+        Font font_draw = new Font("Microsoft Sans Serif", 9.0f,
+                        FontStyle.Regular);
+
+        ToolTip toolTip1 = new ToolTip();
 
         public Form1()
         {
@@ -100,9 +109,18 @@ namespace Memory_4
             }
             old_name = profil[10];
             counter_game = Convert.ToInt32(profil[11]);
-            counter_level_game = Convert.ToInt32(profil[12]);
-            counter_tema_game = Convert.ToInt32(profil[13]);
+            level_game[0] = Convert.ToInt32(profil[12]);
+            level_game[1] = Convert.ToInt32(profil[13]);
+            tema_game[0] = Convert.ToInt32(profil[14]);
+            tema_game[1] = Convert.ToInt32(profil[15]);
+            victory_count = Convert.ToInt32(profil[16]);
+            para_count = Convert.ToInt32(profil[17]);
             this.FormClosed += Form1_Closed;
+
+            toolTip1.InitialDelay = 100;
+            toolTip1.ShowAlways = true;
+            toolTip1.SetToolTip(this.pictureBox_fon_1, "Это вы !");
+            toolTip1.SetToolTip(this.pictureBox2, "Это вы !");
         }
 
         private void Form1_Closed(object sender, System.EventArgs e)
@@ -181,6 +199,7 @@ namespace Memory_4
 
         public void obnova_tabliz()
         {
+            string[] profile = new string[18];
             string[,] mass = new string[6, 4];
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.txt");
             FileInfo fileInfo = new FileInfo(filePath);
@@ -216,15 +235,15 @@ namespace Memory_4
                 {
                     ses += s + '!';
                 }
-                profil = ses.Split('!');
+                profile = ses.Split('!');
             }
 
             for (int i = 0; i < mass.GetUpperBound(0); i++)
             {
                 if (mass[i, 0] == old_name)
                 {
-                    mass[i, 0] = profil[10];
-                    mass[i, 2] = profil[4];
+                    mass[i, 0] = profile[10];
+                    mass[i, 2] = profile[4];
                 }
             }
 
@@ -346,6 +365,7 @@ namespace Memory_4
             int rer = result;
             string[,] mass = new string[6, 4];
             string[] mas = new string[6];
+            string[] profile = new string[18];
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "example.txt");
             FileInfo fileInfo = new FileInfo(filePath);
@@ -360,7 +380,7 @@ namespace Memory_4
                 {
                     ses += s + '!';
                 }
-                profil = ses.Split('!');
+                profile = ses.Split('!');
             }
 
             // чтение текста из файла
@@ -389,7 +409,7 @@ namespace Memory_4
                 {
                     mass[5, 0] = hero;
                     mass[5, 1] = rer.ToString();
-                    mass[5, 2] = profil[4];
+                    mass[5, 2] = profile[4];
                     mass[5, 3] = 6.ToString();
                 }
 
@@ -635,6 +655,7 @@ namespace Memory_4
 
         private void button_profil_Click(object sender, EventArgs e)
         {
+            string[] profile = new string[18];
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
             FileInfo fileInfo = new FileInfo(filePath);
             using (StreamReader reader = fileInfo.OpenText())
@@ -645,12 +666,13 @@ namespace Memory_4
                 {
                     ses += s + '!';
                 }
-                profil = ses.Split('!');
+                profile = ses.Split('!');
             }
-            pictureBox2.Image = (Image)Properties.Resources.ResourceManager.GetObject(profil[4]);
-            pictureBox2.BackColor = Color.FromName(profil[5]);
-            textBox_name_profil.Text = profil[10];
+            pictureBox2.Image = (Image)Properties.Resources.ResourceManager.GetObject(profile[4]);
+            pictureBox2.BackColor = Color.FromName(profile[5]);
+            textBox_name_profil.Text = profile[10];
             old_name = textBox_name_profil.Text;
+            
             write_statistik();
             read_statistik();
             this.tabControl1.SelectedIndex = 5;
@@ -670,6 +692,7 @@ namespace Memory_4
 
         public void new_avatar()
         {
+            string[] profil = new string[18];
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
             FileInfo fileInfo = new FileInfo(filePath);
             using (StreamReader reader = fileInfo.OpenText())
@@ -764,7 +787,7 @@ namespace Memory_4
 
             using (StreamWriter writer = fileInfo.AppendText())
             {
-                for (int i = 0; i < words.GetLength(0); i++)
+                for (int i = 0; i < words.GetLength(0) - 1; i++)
                 {
                     writer.WriteLine(words[i]);
                 }
@@ -786,30 +809,34 @@ namespace Memory_4
             pictureBox_fon_1.BackColor = Color.Orange;
         }
 
-        public void statistica_game(int level, int tema)
+        public void statistica_game(int level, int tema, int victory, int para)
         {
             counter_game++;
             if( level == 0 )
             {
-                level_game[0] += 1;
+                level_game[0] ++;
             }
             else
             {
-                level_game[1] += 1;
+                level_game[1] ++;
             }
 
             switch(tema)
             {
-                case 1: tema_game[0] += 1; break;
-                case 2: tema_game[1] += 1; break;
+                case 1: tema_game[0] ++; break;
+                case 2: tema_game[1] ++; break;
                 default: break;
             }
+
+            victory_count += victory;
+            para_count += para;
             //MessageBox.Show("statistica_game - " + counter_game);
             //write_statistik();
         }
 
         public void write_statistik()
         {
+            string[] profil = new string[18];
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
             FileInfo fileInfo = new FileInfo(filePath);
             using (StreamReader reader = fileInfo.OpenText())
@@ -828,13 +855,15 @@ namespace Memory_4
             profil[13] = level_game[1].ToString();
             profil[14] = tema_game[0].ToString();
             profil[15] = tema_game[1].ToString();
+            profil[16] = victory_count.ToString();
+            profil[17] = para_count.ToString();
 
             File.Delete(filePath);
             File.Create(filePath).Close();
 
             using (StreamWriter writer = fileInfo.AppendText())
             {
-                for (int i = 0; i < profil.GetLength(0); i++)
+                for (int i = 0; i < profil.GetLength(0) - 1; i++)
                 {
                     writer.WriteLine(profil[i]);
                 }
@@ -843,8 +872,12 @@ namespace Memory_4
 
         public void read_statistik()
         {
+            string[] profil = new string[18];
             int[] level = new int[2];
-            int[] tema = new int[2];
+            //int[,] tema = new int[2,2];
+            string[,] tema = new string[2, 2];
+            string tema_string = "";
+            string level_string = "";
 
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "profil.txt");
             FileInfo fileInfo = new FileInfo(filePath);
@@ -861,20 +894,90 @@ namespace Memory_4
 
             level[0] = Convert.ToInt32(profil[12]);
             level[1] = Convert.ToInt32(profil[13]);
-            tema[0] = Convert.ToInt32(profil[14]);
-            tema[1] = Convert.ToInt32(profil[15]);
 
-            for(int i = 0; i < tema.GetLength(0); i++)
+            tema[0, 0] = profil[14];
+            tema[0, 1] = "География";
+            tema[1, 0] = profil[15];
+            tema[1, 1] = "Живопись";
+
+            for (int j = 0; j < tema.GetLength(0); j++)
             {
-                int item = tema[i];
-                for(int j = 1; j < tema.GetLength(0) - 1; j++)
+                for(int i = tema.GetLength(0) - 1; i > 0; i--)
                 {
-
+                    if (Convert.ToInt32(tema[i, 0]) > Convert.ToInt32(tema[i - 1, 0]))
+                    {
+                        (tema[i - 1, 0], tema[i, 0]) = (tema[i, 0], tema[i - 1, 0]);
+                        (tema[i - 1, 1], tema[i, 1]) = (tema[i, 1], tema[i - 1, 1]);
+                    }
                 }
             }
 
-            label_pro_1_2.Text = profil[11].ToString();
+            if (tema[0, 0] == tema[1, 0])
+            {
+                tema_string = $"{tema[0, 1]} ({tema[0, 0]}), {tema[1, 1]} ({tema[1, 0]})";
+                label_pro_2_2.Font = font_draw;
+            }
+            else
+            {
+                tema_string = $"{tema[0, 1]} ({tema[0, 0]})";
+                label_pro_2_2.Font = font_winner;
+            }
 
+            if(level[0] == level[1])
+            {
+                level_string = $"Сложный ({level[1]}), легкий ({level[0]})";
+                label_pro_3_2.Font = font_draw;
+            }
+            else
+            {
+                if (level[0] > level[1])
+                {
+                    level_string = $"Легкая ({level[0]})";
+                    label_pro_3_2.Font = font_winner;
+                }
+                else
+                {
+                    level_string = $"Сложная ({level[1]})";
+                    label_pro_3_2.Font = font_winner;
+                }
+            }
+            
+            double procent = Convert.ToDouble(profil[16]) / Convert.ToDouble(profil[11]);
+            procent = Math.Round(procent*100,2);
+
+            if(procent >= 80)
+            {
+                label_pro_4_2.ForeColor = Color.DarkViolet;
+            }
+            else if(procent >= 50)
+            {
+                label_pro_4_2.ForeColor = Color.ForestGreen;
+            }
+            else if(procent >= 25)
+            {
+                label_pro_4_2.ForeColor = Color.Goldenrod;
+            }
+            else if (procent > 0)
+            {
+                label_pro_4_2.ForeColor = Color.Crimson;
+            }
+
+            if (Convert.ToInt32(profil[11]) != 0)
+            {
+                label_pro_1_2.Text = profil[11];
+                label_pro_2_2.Text = tema_string;
+                label_pro_3_2.Text = level_string;
+                label_pro_4_2.Text = procent.ToString() + " %";
+                label_pro_5_2.Text = profil[17];
+            }
+            else
+            {
+                label_pro_1_2.Text = "--";
+                label_pro_2_2.Text = "--";
+                label_pro_3_2.Text = "--";
+                label_pro_4_2.Text = "--";
+                label_pro_5_2.Text = "--";
+            }
         }
     }
 }
