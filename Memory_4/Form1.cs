@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.CompilerServices;
 using ToolTip = System.Windows.Forms.ToolTip;
+using System.Security.Cryptography;
 
 namespace Memory_4
 {
@@ -25,6 +26,8 @@ namespace Memory_4
         static int min_record;
         static int Poin;
         string[] profil = new string[18];
+        string[] temi = new string[18];
+        string[] tem_set = new string[2];
         string[] words = new string[18];
         string[] slovo = new string[3];
         string[] baza = new string[18];
@@ -115,6 +118,40 @@ namespace Memory_4
             tema_game[1] = Convert.ToInt32(profil[15]);
             victory_count = Convert.ToInt32(profil[16]);
             para_count = Convert.ToInt32(profil[17]);
+
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "tema.txt");
+            FileInfo fileInfo = new FileInfo(filePath);
+            string sesi = null;
+            int count_tem = 0;
+
+            using (StreamReader reader = fileInfo.OpenText())
+            {
+                string s = "";
+                while ((s = reader.ReadLine()) != null)
+                {
+                    sesi += s + '!';
+                    count_tem++;
+                }
+                temi = sesi.Split('!');
+            }
+            comboBox1.Items.AddRange(temi);
+            comboBox1.Items.RemoveAt(count_tem);
+            //comboBox1.SelectedIndex = 0;
+            //radioButton2.Select();
+
+            string filePath_3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "setting.txt");
+            FileInfo fileInfo_3 = new FileInfo(filePath_3);
+            using (StreamReader reader = fileInfo_3.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                tem_set = ses.Split('!');
+            }
+
             this.FormClosed += Form1_Closed;
 
             toolTip1.InitialDelay = 100;
@@ -187,7 +224,16 @@ namespace Memory_4
 
         private void button_menu_1_game_Click(object sender, EventArgs e)
         {
-            this.tabControl1.SelectedIndex = 1;
+            comboBox1.SelectedIndex = Convert.ToInt32(tem_set[0]) - 1;
+            if(tem_set[1] == "1")
+            {
+                radioButton1.Select();
+            }
+            else
+            {
+                radioButton2.Select();
+            }
+            this.tabControl1.SelectedIndex = 2;
         }
 
         private void button_menu_1_rec_Click(object sender, EventArgs e)
@@ -278,7 +324,7 @@ namespace Memory_4
 
         private void button_menu_3_back_Click(object sender, EventArgs e)
         {
-            this.tabControl1.SelectedIndex = 1;
+            this.tabControl1.SelectedIndex = 0;
         }
 
         private void button_menu_4_back_Click(object sender, EventArgs e)
@@ -977,6 +1023,57 @@ namespace Memory_4
                 label_pro_3_2.Text = "--";
                 label_pro_4_2.Text = "--";
                 label_pro_5_2.Text = "--";
+            }
+        }
+
+        private void button1_game_start(object sender, EventArgs e)
+        {
+            int[] set = new int[2];
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    Tema = 1;
+                    break;
+                case 1:
+                    Tema = 2;
+                    break;
+                default: break;
+            }
+
+            min_record = Convert.ToInt32(label2_5.Text);
+
+            if (radioButton1.Checked)
+            {
+                set[1] = 1;
+                Form3_4x4 form3 = new Form3_4x4(SelfRef, Tema, min_record);
+                form3.Okrugli_pictire();
+                this.Hide();
+            }
+
+            if (radioButton2.Checked)
+            {
+                set[1] = 2;
+                Form2_8x8 form2 = new Form2_8x8(SelfRef, Tema, min_record);
+                form2.Okrugli_pictire();
+                this.Hide();
+            }
+
+            if(checkBox1.Checked)
+            {
+                string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "setting.txt");
+                FileInfo fileInfo = new FileInfo(filePath);
+
+                File.Delete(filePath);
+                File.Create(filePath).Close();
+
+                set[0] = Tema;
+                using (StreamWriter writer = fileInfo.AppendText())
+                {
+                    for (int i = 0; i < set.GetLength(0); i++)
+                    {
+                        writer.WriteLine(set[i]);
+                    }
+                }
             }
         }
     }

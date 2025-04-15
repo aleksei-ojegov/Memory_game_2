@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button_game = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.button_profil = new System.Windows.Forms.Button();
@@ -46,8 +45,12 @@
             this.button_menu_2_tema_2 = new System.Windows.Forms.Button();
             this.button_menu_2_tem_1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button_game_easy = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button_game_start = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button_menu_3_back = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
@@ -110,6 +113,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_rec_5)).BeginInit();
@@ -125,24 +129,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_fon_1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button_game
-            // 
-            this.button_game.BackColor = System.Drawing.Color.LightBlue;
-            this.button_game.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_game.FlatAppearance.BorderSize = 0;
-            this.button_game.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.button_game.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.button_game.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_game.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_game.ForeColor = System.Drawing.Color.Black;
-            this.button_game.Location = new System.Drawing.Point(104, 115);
-            this.button_game.Name = "button_game";
-            this.button_game.Size = new System.Drawing.Size(130, 30);
-            this.button_game.TabIndex = 0;
-            this.button_game.Text = "Сложно";
-            this.button_game.UseVisualStyleBackColor = false;
-            this.button_game.Click += new System.EventHandler(this.button_game_Click);
             // 
             // tabControl1
             // 
@@ -369,10 +355,11 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.button_game_easy);
+            this.tabPage3.Controls.Add(this.checkBox1);
+            this.tabPage3.Controls.Add(this.button_game_start);
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.button_menu_3_back);
-            this.tabPage3.Controls.Add(this.button_game);
             this.tabPage3.Location = new System.Drawing.Point(4, 14);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -380,34 +367,80 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
-            // label6
+            // checkBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MV Boli", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(62, 33);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(214, 29);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Сложность игры";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(140, 128);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(194, 21);
+            this.checkBox1.TabIndex = 21;
+            this.checkBox1.Text = "Сохранить по умолчанию";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button_game_easy
+            // button_game_start
             // 
-            this.button_game_easy.BackColor = System.Drawing.Color.LightBlue;
-            this.button_game_easy.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button_game_easy.FlatAppearance.BorderSize = 0;
-            this.button_game_easy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
-            this.button_game_easy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
-            this.button_game_easy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_game_easy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button_game_easy.ForeColor = System.Drawing.Color.Black;
-            this.button_game_easy.Location = new System.Drawing.Point(104, 79);
-            this.button_game_easy.Name = "button_game_easy";
-            this.button_game_easy.Size = new System.Drawing.Size(130, 30);
-            this.button_game_easy.TabIndex = 6;
-            this.button_game_easy.Text = "Легко";
-            this.button_game_easy.UseVisualStyleBackColor = false;
-            this.button_game_easy.Click += new System.EventHandler(this.button_game_easy_Click);
+            this.button_game_start.BackColor = System.Drawing.Color.LightBlue;
+            this.button_game_start.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button_game_start.FlatAppearance.BorderSize = 0;
+            this.button_game_start.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.button_game_start.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SkyBlue;
+            this.button_game_start.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_game_start.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button_game_start.ForeColor = System.Drawing.Color.Black;
+            this.button_game_start.Location = new System.Drawing.Point(102, 199);
+            this.button_game_start.Name = "button_game_start";
+            this.button_game_start.Size = new System.Drawing.Size(130, 30);
+            this.button_game_start.TabIndex = 20;
+            this.button_game_start.Text = "Играть";
+            this.button_game_start.UseVisualStyleBackColor = false;
+            this.button_game_start.Click += new System.EventHandler(this.button1_game_start);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Location = new System.Drawing.Point(24, 68);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(104, 81);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Сложность";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.White;
+            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(64, 21);
+            this.radioButton1.TabIndex = 13;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Легко";
+            this.radioButton1.UseVisualStyleBackColor = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 46);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(76, 21);
+            this.radioButton2.TabIndex = 14;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Сложно";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(149, 68);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 18;
             // 
             // button_menu_3_back
             // 
@@ -419,7 +452,7 @@
             this.button_menu_3_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_menu_3_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_menu_3_back.ForeColor = System.Drawing.Color.Black;
-            this.button_menu_3_back.Location = new System.Drawing.Point(104, 173);
+            this.button_menu_3_back.Location = new System.Drawing.Point(102, 235);
             this.button_menu_3_back.Name = "button_menu_3_back";
             this.button_menu_3_back.Size = new System.Drawing.Size(130, 30);
             this.button_menu_3_back.TabIndex = 5;
@@ -1181,6 +1214,8 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1206,8 +1241,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button_game;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1220,7 +1253,6 @@
         private System.Windows.Forms.Button button_menu_3_back;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button_menu_4_back;
-        private System.Windows.Forms.Button button_game_easy;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -1255,7 +1287,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TabPage tabPage6;
@@ -1282,6 +1313,12 @@
         private System.Windows.Forms.Label label_pro_1_1;
         private System.Windows.Forms.Label label_pro_5_2;
         private System.Windows.Forms.Label label_pro_5_1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button_game_start;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
