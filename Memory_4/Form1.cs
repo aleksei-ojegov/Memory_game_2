@@ -69,9 +69,11 @@ namespace Memory_4
         int counter_tema_game = 0;
         int victory_count = 0;
         int para_count = 0;
+        int vidor_icon_tem = 0;
 
         int[] level_game = new int[2];
         int[] tema_game = new int[2];
+        int[] set_game = new int[2];
 
         Color disco = new Color();
         Font font_winner = new Font("Microsoft Sans Serif", 9.0f,
@@ -80,7 +82,7 @@ namespace Memory_4
                         FontStyle.Regular);
 
         ToolTip toolTip1 = new ToolTip();
-
+        ListViewItem lvi_2 = new ListViewItem();
         public Form1()
         {
             InitializeComponent();
@@ -134,23 +136,12 @@ namespace Memory_4
                 }
                 temi = sesi.Split('!');
             }
-            comboBox1.Items.AddRange(temi);
-            comboBox1.Items.RemoveAt(count_tem);
+            //comboBox1.Items.AddRange(temi);
+            //comboBox1.Items.RemoveAt(count_tem);
             //comboBox1.SelectedIndex = 0;
             //radioButton2.Select();
 
-            string filePath_3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "setting.txt");
-            FileInfo fileInfo_3 = new FileInfo(filePath_3);
-            using (StreamReader reader = fileInfo_3.OpenText())
-            {
-                string s = "";
-                string ses = null;
-                while ((s = reader.ReadLine()) != null)
-                {
-                    ses += s + '!';
-                }
-                tem_set = ses.Split('!');
-            }
+            
 
             this.FormClosed += Form1_Closed;
 
@@ -224,8 +215,21 @@ namespace Memory_4
 
         private void button_menu_1_game_Click(object sender, EventArgs e)
         {
-            comboBox1.SelectedIndex = Convert.ToInt32(tem_set[0]) - 1;
-            if(tem_set[1] == "1")
+            //comboBox1.SelectedIndex = Convert.ToInt32(tem_set[0]) - 1;
+            string filePath_3 = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "setting.txt");
+            FileInfo fileInfo_3 = new FileInfo(filePath_3);
+            using (StreamReader reader = fileInfo_3.OpenText())
+            {
+                string s = "";
+                string ses = null;
+                while ((s = reader.ReadLine()) != null)
+                {
+                    ses += s + '!';
+                }
+                tem_set = ses.Split('!');
+            }
+
+            if (tem_set[1] == "1")
             {
                 radioButton1.Select();
             }
@@ -233,6 +237,17 @@ namespace Memory_4
             {
                 radioButton2.Select();
             }
+
+            listView1.Clear();
+            for (int i = 0; i < 2; i++)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = temi[i];
+                lvi.ImageIndex = i;
+                listView1.Items.Add(lvi);
+            }
+            int select_icon = Convert.ToInt32(tem_set[0]) - 1;
+            listView1.Items[select_icon].BackColor = Color.Aqua;
             this.tabControl1.SelectedIndex = 2;
         }
 
@@ -324,6 +339,46 @@ namespace Memory_4
 
         private void button_menu_3_back_Click(object sender, EventArgs e)
         {
+            switch (vidor_icon_tem)
+            {
+                case 0:
+                    Tema = 1;
+                    break;
+                case 1:
+                    Tema = 2;
+                    break;
+                default: break;
+            }
+
+            min_record = Convert.ToInt32(label2_5.Text);
+
+            if (radioButton1.Checked)
+            {
+                set_game[1] = 1;
+            }
+
+            if (radioButton2.Checked)
+            {
+                set_game[1] = 2;
+            }
+
+            if (checkBox1.Checked)
+            {
+                string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "setting.txt");
+                FileInfo fileInfo = new FileInfo(filePath);
+
+                File.Delete(filePath);
+                File.Create(filePath).Close();
+
+                set_game[0] = Tema;
+                using (StreamWriter writer = fileInfo.AppendText())
+                {
+                    for (int i = 0; i < set_game.GetLength(0); i++)
+                    {
+                        writer.WriteLine(set_game[i]);
+                    }
+                }
+            }
             this.tabControl1.SelectedIndex = 0;
         }
 
@@ -1028,8 +1083,19 @@ namespace Memory_4
 
         private void button1_game_start(object sender, EventArgs e)
         {
-            int[] set = new int[2];
-            switch (comboBox1.SelectedIndex)
+            //int[] set = new int[2];
+            //switch (comboBox1.SelectedIndex)
+            //{
+            //    case 0:
+            //        Tema = 1;
+            //        break;
+            //    case 1:
+            //        Tema = 2;
+            //        break;
+            //    default: break;
+            //}
+
+            switch (vidor_icon_tem)
             {
                 case 0:
                     Tema = 1;
@@ -1039,12 +1105,12 @@ namespace Memory_4
                     break;
                 default: break;
             }
-
+            
             min_record = Convert.ToInt32(label2_5.Text);
 
             if (radioButton1.Checked)
             {
-                set[1] = 1;
+                set_game[1] = 1;
                 Form3_4x4 form3 = new Form3_4x4(SelfRef, Tema, min_record);
                 form3.Okrugli_pictire();
                 this.Hide();
@@ -1052,7 +1118,7 @@ namespace Memory_4
 
             if (radioButton2.Checked)
             {
-                set[1] = 2;
+                set_game[1] = 2;
                 Form2_8x8 form2 = new Form2_8x8(SelfRef, Tema, min_record);
                 form2.Okrugli_pictire();
                 this.Hide();
@@ -1066,14 +1132,30 @@ namespace Memory_4
                 File.Delete(filePath);
                 File.Create(filePath).Close();
 
-                set[0] = Tema;
+                set_game[0] = Tema;
                 using (StreamWriter writer = fileInfo.AppendText())
                 {
-                    for (int i = 0; i < set.GetLength(0); i++)
+                    for (int i = 0; i < set_game.GetLength(0); i++)
                     {
-                        writer.WriteLine(set[i]);
+                        writer.WriteLine(set_game[i]);
                     }
                 }
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int select_icon = Convert.ToInt32(tem_set[0]) - 1;
+            listView1.Items[select_icon].BackColor = Color.White;
+
+            foreach (ListViewItem item in listView1.SelectedItems)
+            {
+                lvi_2.BackColor = Color.White;
+                item.Selected = false;
+                item.BackColor = Color.Aqua;
+                lvi_2 = item;
+                //int der = item.Index;
+                vidor_icon_tem = item.Index;
             }
         }
     }

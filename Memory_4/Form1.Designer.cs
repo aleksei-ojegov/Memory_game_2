@@ -45,12 +45,12 @@
             this.button_menu_2_tema_2 = new System.Windows.Forms.Button();
             this.button_menu_2_tem_1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button_game_start = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button_menu_3_back = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
@@ -85,7 +85,6 @@
             this.button_back = new System.Windows.Forms.Button();
             this.pictureBox_book = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,12 +107,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox_fon_1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_rec_5)).BeginInit();
@@ -355,10 +354,11 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
+            this.tabPage3.Controls.Add(this.radioButton1);
+            this.tabPage3.Controls.Add(this.listView1);
+            this.tabPage3.Controls.Add(this.radioButton2);
             this.tabPage3.Controls.Add(this.checkBox1);
             this.tabPage3.Controls.Add(this.button_game_start);
-            this.tabPage3.Controls.Add(this.groupBox1);
-            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.button_menu_3_back);
             this.tabPage3.Location = new System.Drawing.Point(4, 14);
             this.tabPage3.Name = "tabPage3";
@@ -367,15 +367,36 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.LargeImageList = this.imageList1;
+            this.listView1.Location = new System.Drawing.Point(22, 20);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(300, 171);
+            this.listView1.SmallImageList = this.imageList1;
+            this.listView1.TabIndex = 22;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "cathedral-saint-basil_1009048.png");
+            this.imageList1.Images.SetKeyName(1, "art-design_1718998.png");
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(140, 128);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(102, 258);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(194, 21);
+            this.checkBox1.Size = new System.Drawing.Size(135, 17);
             this.checkBox1.TabIndex = 21;
-            this.checkBox1.Text = "Сохранить по умолчанию";
+            this.checkBox1.Text = "Сохранить настройки";
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // button_game_start
@@ -396,25 +417,13 @@
             this.button_game_start.UseVisualStyleBackColor = false;
             this.button_game_start.Click += new System.EventHandler(this.button1_game_start);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(24, 68);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(104, 81);
-            this.groupBox1.TabIndex = 19;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Сложность";
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.BackColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(6, 19);
+            this.radioButton1.Location = new System.Drawing.Point(102, 235);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(64, 21);
+            this.radioButton1.Size = new System.Drawing.Size(56, 17);
             this.radioButton1.TabIndex = 13;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Легко";
@@ -423,24 +432,13 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 46);
+            this.radioButton2.Location = new System.Drawing.Point(168, 235);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 21);
+            this.radioButton2.Size = new System.Drawing.Size(64, 17);
             this.radioButton2.TabIndex = 14;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Сложно";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 68);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 18;
             // 
             // button_menu_3_back
             // 
@@ -452,7 +450,7 @@
             this.button_menu_3_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_menu_3_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_menu_3_back.ForeColor = System.Drawing.Color.Black;
-            this.button_menu_3_back.Location = new System.Drawing.Point(102, 235);
+            this.button_menu_3_back.Location = new System.Drawing.Point(102, 308);
             this.button_menu_3_back.Name = "button_menu_3_back";
             this.button_menu_3_back.Size = new System.Drawing.Size(130, 30);
             this.button_menu_3_back.TabIndex = 5;
@@ -771,9 +769,9 @@
             this.button_menu_4_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_menu_4_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_menu_4_back.ForeColor = System.Drawing.Color.Black;
-            this.button_menu_4_back.Location = new System.Drawing.Point(97, 323);
+            this.button_menu_4_back.Location = new System.Drawing.Point(102, 307);
             this.button_menu_4_back.Name = "button_menu_4_back";
-            this.button_menu_4_back.Size = new System.Drawing.Size(137, 26);
+            this.button_menu_4_back.Size = new System.Drawing.Size(130, 30);
             this.button_menu_4_back.TabIndex = 6;
             this.button_menu_4_back.Text = "Назад";
             this.button_menu_4_back.UseVisualStyleBackColor = false;
@@ -782,6 +780,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.White;
+            this.tabPage5.Controls.Add(this.button1);
             this.tabPage5.Controls.Add(this.textBox3);
             this.tabPage5.Controls.Add(this.textBox2);
             this.tabPage5.Controls.Add(this.textBox1);
@@ -802,7 +801,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(30, 266);
+            this.textBox3.Location = new System.Drawing.Point(28, 257);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -815,7 +814,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(30, 230);
+            this.textBox2.Location = new System.Drawing.Point(28, 221);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
@@ -829,7 +828,7 @@
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(30, 194);
+            this.textBox1.Location = new System.Drawing.Point(28, 185);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -841,9 +840,10 @@
             // label_nomer_book
             // 
             this.label_nomer_book.AutoSize = true;
-            this.label_nomer_book.Location = new System.Drawing.Point(152, 312);
+            this.label_nomer_book.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_nomer_book.Location = new System.Drawing.Point(152, 299);
             this.label_nomer_book.Name = "label_nomer_book";
-            this.label_nomer_book.Size = new System.Drawing.Size(35, 13);
+            this.label_nomer_book.Size = new System.Drawing.Size(41, 15);
             this.label_nomer_book.TabIndex = 11;
             this.label_nomer_book.Text = "label2";
             // 
@@ -854,12 +854,13 @@
             this.button_next.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button_next.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.button_next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_next.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_next.ForeColor = System.Drawing.Color.Black;
-            this.button_next.Location = new System.Drawing.Point(208, 307);
+            this.button_next.Location = new System.Drawing.Point(213, 294);
             this.button_next.Name = "button_next";
-            this.button_next.Size = new System.Drawing.Size(75, 23);
+            this.button_next.Size = new System.Drawing.Size(75, 26);
             this.button_next.TabIndex = 10;
-            this.button_next.Text = "Вперёд";
+            this.button_next.Text = "ВПЕРЁД";
             this.button_next.UseVisualStyleBackColor = false;
             this.button_next.Click += new System.EventHandler(this.button_next_Click);
             // 
@@ -870,18 +871,19 @@
             this.button_back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
             this.button_back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
             this.button_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_back.ForeColor = System.Drawing.Color.Black;
-            this.button_back.Location = new System.Drawing.Point(58, 307);
+            this.button_back.Location = new System.Drawing.Point(57, 294);
             this.button_back.Name = "button_back";
-            this.button_back.Size = new System.Drawing.Size(75, 23);
+            this.button_back.Size = new System.Drawing.Size(75, 26);
             this.button_back.TabIndex = 9;
-            this.button_back.Text = "Назад";
+            this.button_back.Text = "НАЗАД";
             this.button_back.UseVisualStyleBackColor = false;
             this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // pictureBox_book
             // 
-            this.pictureBox_book.Location = new System.Drawing.Point(63, 46);
+            this.pictureBox_book.Location = new System.Drawing.Point(60, 38);
             this.pictureBox_book.Name = "pictureBox_book";
             this.pictureBox_book.Size = new System.Drawing.Size(225, 133);
             this.pictureBox_book.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -892,21 +894,12 @@
             // 
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(3, 3);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(345, 24);
             this.menuStrip1.TabIndex = 13;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.BackColor = System.Drawing.Color.LightBlue;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(67, 20);
-            this.toolStripMenuItem1.Text = "В МЕНЮ";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -921,14 +914,14 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem3.Text = "ГЕОГРАФИЯ";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(143, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem4.Text = "ЖИВОПИСЬ";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -967,7 +960,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label_pro_1_2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label_pro_1_1, 0, 0);
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 143);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 136);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -1148,7 +1141,7 @@
             this.button_back_profil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_back_profil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_back_profil.ForeColor = System.Drawing.Color.Black;
-            this.button_back_profil.Location = new System.Drawing.Point(109, 312);
+            this.button_back_profil.Location = new System.Drawing.Point(102, 307);
             this.button_back_profil.Name = "button_back_profil";
             this.button_back_profil.Size = new System.Drawing.Size(130, 30);
             this.button_back_profil.TabIndex = 9;
@@ -1191,6 +1184,23 @@
             this.timer1.Interval = 300;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightBlue;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(135, 326);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 26);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "В МЕНЮ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1214,8 +1224,6 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1276,7 +1284,6 @@
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.PictureBox pictureBox_book;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
@@ -1313,12 +1320,13 @@
         private System.Windows.Forms.Label label_pro_1_1;
         private System.Windows.Forms.Label label_pro_5_2;
         private System.Windows.Forms.Label label_pro_5_1;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button_game_start;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
